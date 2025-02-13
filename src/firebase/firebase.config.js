@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAMvJXIRw_auGufvD31w7YVE1nGJmfR0PE",
-  authDomain: "ecoquest-himadree.firebaseapp.com",
-  projectId: "ecoquest-himadree",
-  storageBucket: "ecoquest-himadree.firebasestorage.app",
-  messagingSenderId: "661979470559",
-  appId: "1:661979470559:web:e9536bcfee2ca37bb0a76a",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
