@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
@@ -13,6 +12,7 @@ import carousel_four from "../assets/carousel-4.jpg";
 import carousel_five from "../assets/carousel-5.jpg";
 import carousel_six from "../assets/carousel-6.jpg";
 import carousel_seven from "../assets/carousel-4.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -30,8 +30,7 @@ const Header = () => {
             pagination={{
               clickable: true,
             }}
-            navigation={true}
-            modules={[Autoplay, EffectFade, Pagination, Navigation]}
+            modules={[Autoplay, EffectFade, Pagination]}
             className="mySwiper"
           >
             <SwiperSlide>
@@ -57,13 +56,16 @@ const Header = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="absolute top-40 z-10 text-center mx-auto w-full px-5 space-y-3">
-          <h1 className="font-extrabold text-5xl text-white">
-            Do more with EcoQuest
-          </h1>
-          <p className="font-bold text-2xl text-white">
-            Plan better with 300,000+ travel experiences
+        <div className="absolute top-40 z-10 text-center mx-auto w-full px-5 space-y-3 text-white">
+          <h1 className="font-extrabold text-5xl">Do more with EcoQuest</h1>
+          <p className="font-bold text-2xl">
+            Plan better with 300+ travel experiences
           </p>
+          <div className="py-5">
+            <Link className="bg-green-300 px-10 py-3 rounded-2xl text-black font-semibold text-xl">
+              Search For Places
+            </Link>
+          </div>
         </div>
       </div>
     </div>
