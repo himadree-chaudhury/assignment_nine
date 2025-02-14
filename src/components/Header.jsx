@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "animate.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
@@ -18,6 +19,7 @@ const Header = () => {
   return (
     <div>
       <div className="relative">
+        {/* Carousel Banner */}
         <div>
           <Swiper
             slidesPerView={1}
@@ -56,7 +58,7 @@ const Header = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="absolute top-40 z-10 text-center mx-auto w-full px-5 space-y-3 text-white">
+        <div className="absolute top-40 z-10 text-center mx-auto w-full px-5 space-y-3 text-white animate__animated animate__fadeIn">
           <h1 className="font-extrabold text-5xl">Do more with EcoQuest</h1>
           <p className="font-bold text-2xl">
             Plan better with 300+ travel experiences
