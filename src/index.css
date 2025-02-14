@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.mySwiper img {
+  width: 100%; /* Full width of the viewport */
+  height: 38rem; /* Adjust as needed */
+  object-fit: cover; /* Ensures the full image is visible without cropping */
+  display: block; /* Removes extra spacing */
+  filter: brightness(0.5);
+}
