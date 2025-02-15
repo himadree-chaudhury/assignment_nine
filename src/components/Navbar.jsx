@@ -37,7 +37,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="space-x-5 hidden md:block">
-          <Link to={"/"} className="hover:underline underline-offset-4 hover:font-bold transition-all duration-200">Home</Link>
+          <Link
+            to={"/"}
+            className="hover:underline underline-offset-4 hover:font-bold transition-all duration-200"
+          >
+            Home
+          </Link>
           <Link to={"auth/updateProfile"}>Update Profile</Link>
           <Link to={"auth/userProfile"}>User Profile</Link>
         </div>
@@ -80,10 +85,14 @@ const Navbar = () => {
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
         >
-          <Link to={"/"}>Home</Link>
-          <Link>Discover</Link>
-          <Link>Update Profile</Link>
-          <Link>User Profile</Link>
+          <Link
+            to={"/"}
+            className="hover:underline underline-offset-4 hover:font-bold transition-all duration-200"
+          >
+            Home
+          </Link>
+          <Link to={"auth/updateProfile"}>Update Profile</Link>
+          <Link to={"auth/userProfile"}>User Profile</Link>
         </div>
       )}
     </div>

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const Login = () => {
+
   const {
     userLogIn,
     createUserWithGoogle,
@@ -11,8 +12,7 @@ const Login = () => {
     setEmailField,
   } = useContext(Context);
   const navigate = useNavigate();
-    const location = useLocation();
-    const URI = (decodeURIComponent(location.state) || "/");
+    const URI = location?.state ? (decodeURIComponent(location.state)) : "/" ;
     // console.log(URI)
 
   const handleSignIn = (e) => {
