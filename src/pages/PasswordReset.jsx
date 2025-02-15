@@ -1,8 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../provider/ContextProvider";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const PasswordReset = () => {
+  const location = useLocation();
+  useEffect(() => {
+    const titles = {
+      "/auth/resetPassword": "Reset Password",
+    };
+    document.title = titles[location.pathname] || "EcoQuest";
+  }, [location.pathname]);
+
   const { updateUserPassword, emailField } = useContext(Context);
   const navigate = useNavigate();
   const handlePasswordReset = (e) => {

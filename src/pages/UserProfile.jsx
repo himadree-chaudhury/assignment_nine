@@ -1,10 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../provider/ContextProvider";
 import { Link, useLocation } from "react-router-dom";
 import "animate.css";
 
 const UserProfile = () => {
-  const location = useLocation();
+    const location = useLocation();
+      useEffect(() => {
+        const titles = {
+          "/auth/userProfile": "Profile",
+        };
+        document.title = titles[location.pathname] || "EcoQuest";
+      }, [location.pathname]);
+    
   console.log(location.state);
   const { user } = useContext(Context);
   const {

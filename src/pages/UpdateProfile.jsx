@@ -1,9 +1,16 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const UpdateProfile = () => {
-  const location = useLocation();
+    const location = useLocation();
+      useEffect(() => {
+        const titles = {
+          "/auth/updateProfile": "Update Profile",
+        };
+        document.title = titles[location.pathname] || "EcoQuest";
+      }, [location.pathname]);
+
   console.log(location.state);
   const navigate = useNavigate();
 

@@ -1,18 +1,18 @@
 // import { useState } from "react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const Register = () => {
   const navigate = useNavigate();
-//   const location = useLocation();
-//   useEffect(() => {
-//     const titles = {
-//       "/auth/register": "Register",
-//     };
-//     document.title = titles[location.pathname] || "EcoQuest";
-//   }, [location.pathname]);
+  const location = useLocation();
+  useEffect(() => {
+    const titles = {
+      "/auth/register": "Register",
+    };
+    document.title = titles[location.pathname] || "EcoQuest";
+  }, [location.pathname]);
 
   const { createNewUser, setUser, updateUser, createUserWithGoogle } =
     useContext(Context);

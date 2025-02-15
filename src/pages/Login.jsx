@@ -1,9 +1,16 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const Login = () => {
+      const location = useLocation();
+      useEffect(() => {
+        const titles = {
+          "/auth/login": "Log-In",
+        };
+        document.title = titles[location.pathname] || "EcoQuest";
+      }, [location.pathname]);
 
   const {
     userLogIn,
