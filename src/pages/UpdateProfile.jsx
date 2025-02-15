@@ -1,24 +1,47 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const UpdateProfile = () => {
+    const location = useLocation();
+    console.log(location.state)
   const navigate = useNavigate();
 
-  const { updateUser } = useContext(Context);
+  const { user, updateUser } = useContext(Context);
 
   const handleUpdateUser = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
     const name = form.get("name");
     const photo = form.get("photo");
-    updateUser({ displayName: name, photoURL: photo })
-      .then(() => {
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (name === user.displayName || photo === user.photoURL) {
+      return;
+    }
+    if (name === "" && photo !== "") {
+      updateUser({ photoURL: photo })
+        .then(() => {
+          navigate("/");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else if (name !== "" && photo === "") {
+      updateUser({ displayName: name })
+        .then(() => {
+          navigate("/auth/userProfile");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      updateUser({ displayName: name, photoURL: photo })
+        .then(() => {
+          navigate("/auth/userProfile");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   return (

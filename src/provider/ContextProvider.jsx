@@ -71,6 +71,12 @@ const ContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    fetch("tripData.json")
+      .then((res) => res.json())
+      .then((data) => setTripsData(data));
+  }, []);
+  
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false)
@@ -81,11 +87,6 @@ const ContextProvider = ({ children }) => {
     };
   }, []);
 
-  useEffect(() => {
-    fetch("tripData.json")
-      .then((res) => res.json())
-      .then((data) => setTripsData(data));
-  }, []);
 
 // console.log(tripsData)
 

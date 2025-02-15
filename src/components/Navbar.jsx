@@ -36,8 +36,8 @@ const Navbar = () => {
             <img src={logo} alt="EcoQuest Since 2024" />
           </Link>
         </div>
-        <div className="space-x-3 hidden md:block">
-          <Link to={"/"}>Home</Link>
+        <div className="space-x-5 hidden md:block">
+          <Link to={"/"} className="hover:underline underline-offset-4 hover:font-bold transition-all duration-200">Home</Link>
           <Link to={"auth/updateProfile"}>Update Profile</Link>
           <Link to={"auth/userProfile"}>User Profile</Link>
         </div>
