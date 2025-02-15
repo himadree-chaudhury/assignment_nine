@@ -38,9 +38,8 @@ const Navbar = () => {
         </div>
         <div className="space-x-3 hidden md:block">
           <Link to={"/"}>Home</Link>
-          <Link>Discover</Link>
           <Link to={"auth/updateProfile"}>Update Profile</Link>
-          <Link to={"auth/register"}>Register</Link>
+          <Link to={"auth/userProfile"}>User Profile</Link>
         </div>
         <div className="flex items-center gap-2 ">
           {user ? (

@@ -1,10 +1,26 @@
+import { Link, useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const navigate = useNavigate();
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen ">
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-red-500">404</h1>
+        <p className="my-4 pb-4 text-lg text-gray-600">
+          Oops! The page you are looking for does not exist.
+        </p>
+        {/* Navigate To Home Button */}
+        <Link
+          to="/"
+          onClick={() => navigate("/")}
+          className="border border-green-400 text-black font-bold px-8 py-3 rounded-3xl hover:bg-green-800 hover:text-white hover:border-green-800 cursor-pointer duration-300 transition-all"
+        >
+          Go Home
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default ErrorPage;

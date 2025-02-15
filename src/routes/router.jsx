@@ -9,6 +9,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import PasswordReset from "../pages/PasswordReset";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
+import UserProfile from "../pages/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,14 @@ const router = createBrowserRouter([
             element: (
               <PrivateRoute>
                 <UpdateProfile></UpdateProfile>
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "/auth/userProfile",
+            element: (
+              <PrivateRoute>
+                <UserProfile></UserProfile>
               </PrivateRoute>
             ),
           },
