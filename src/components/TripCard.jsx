@@ -10,7 +10,7 @@ const TripCard = ({ trip }) => {
     <div className="space-y-3 flex flex-col">
       <div className="">
         <img
-          className="h-40 w-full object-cover"
+          className="h-40 w-full object-cover rounded-lg"
           src={Image}
           alt={AdventureTitle}
         />

@@ -39,7 +39,7 @@ const Navbar = () => {
           <Link to={"/"}>Home</Link>
           <Link>Discover</Link>
           <Link>Update Profile</Link>
-          <Link>User Profile</Link>
+          <Link to={"register"}>Register</Link>
         </div>
         <div className="flex items-center gap-2 ">
           <FaRegUserCircle className="text-3xl" />

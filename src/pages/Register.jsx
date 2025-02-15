@@ -1,12 +1,45 @@
-
+// import { useState } from "react";
+import { useContext, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Context } from "../provider/ContextProvider";
 
 const Register = () => {
+  const location = useLocation();
+  useEffect(() => {
+    const titles = {
+      "/register": "Register",
+    };
+    document.title = titles[location.pathname] || "EcoQuest";
+  }, [location.pathname]);
+    
+    const { createNewUser}= useContext(Context)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const name = form.get("name");
+    const email = form.get("email");
+    const photo = form.get("image");
+      const password = form.get("password");
+      createNewUser(email, password)
+          .then((result) => {
+              console.log(result)
+          })
+          .catch
+              {(error) => {
+          console.log(error)
+          }
+      };
+    // console.log(email, password, name, photo); // Logs form data
+  };
   return (
     <section className="max-w-screen-2xl p-4 mx-auto">
       <div className="flex justify-center items-center">
-        <form className="flex flex-col gap-3 bg-white p-8 w-96 rounded-xl shadow-md">
+        <form
+          className="flex flex-col gap-3 bg-white p-8 w-96 rounded-xl shadow-md"
+          onSubmit={handleSubmit}
+        >
           <h1 className="text-center font-bold text-3xl">Get Exploring</h1>
           <p className="text-center ">
             Create one below. Quick and easy - promise!
@@ -28,6 +61,7 @@ const Register = () => {
             </svg>
             <input
               type="text"
+              name="name"
               placeholder="Enter your Name"
               className="ml-3 border-none outline-none w-full"
             />
@@ -46,13 +80,16 @@ const Register = () => {
             </svg>
             <input
               type="text"
+              name="image"
               placeholder="Enter Image Link (Imgur)"
               className="ml-3 border-none outline-none w-full"
             />
           </div>
           {/* Email Input */}
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold">Email</label>
+            <label className="text-gray-700 font-semibold">
+              Email <span className="text-red-500">*</span>
+            </label>
           </div>
           <div className="flex items-center border border-gray-300 rounded-lg h-12 px-3 transition focus-within:border-green-500">
             <svg
@@ -67,14 +104,18 @@ const Register = () => {
             </svg>
             <input
               type="email"
+              name="email"
               placeholder="Enter your Email"
               className="ml-3 border-none outline-none w-full"
+              required
             />
           </div>
 
           {/* Password Input */}
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold">Password</label>
+            <label className="text-gray-700 font-semibold">
+              Password <span className="text-red-500">*</span>
+            </label>
           </div>
           <div className="flex items-center border border-gray-300 rounded-lg h-12 px-3 transition focus-within:border-green-500">
             <svg
@@ -88,27 +129,33 @@ const Register = () => {
             </svg>
             <input
               type="password"
+              name="password"
               placeholder="Enter your Password"
               className="ml-3 border-none outline-none w-full"
+              required
             />
           </div>
 
           {/* Remember Me & Forgot Password */}
           <div className="text-sm text-gray-700">
             <div className="flex items-baseline gap-2">
-              <input type="radio" className="" />
+              <input type="radio" name="termsAccepted" className="" />
               <label>
-                Accept our <span className="text-green-500">Terms of Use</span>, and <span className="text-green-500">Privacy</span> & <span className="text-green-500">Cookies</span> Statement.
+                Accept our <span className="text-green-500">Terms of Use</span>,
+                and <span className="text-green-500">Privacy</span> &{" "}
+                <span className="text-green-500">Cookies</span> Statement.
               </label>
             </div>
           </div>
 
-          {/* Sign In Button */}
-          <Link className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition">
+          {/* Register Button */}
+          <button
+            type="submit"
+            className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition"
+          >
             Register
-          </Link>
-
-          {/* Sign Up Link */}
+          </button>
+          {/* Sign In Link */}
           <p className="text-center text-gray-700 text-sm">
             Do have an account?{" "}
             <Link className="text-green-500 cursor-pointer">Sign In</Link>
@@ -119,7 +166,7 @@ const Register = () => {
           {/* Social Sign-In Buttons */}
           <div className="flex gap-3">
             <Link className="flex items-center justify-center w-full h-12 border border-gray-300 rounded-lg hover:border-green-500 transition">
-              <FcGoogle className="text-xl"/>
+              <FcGoogle className="text-xl" />
               <span className="ml-2">Google</span>
             </Link>
           </div>

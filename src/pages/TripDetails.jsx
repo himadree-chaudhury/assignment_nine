@@ -49,7 +49,7 @@ const TripDetails = () => {
             <p>|</p>
             <p>{Location}</p>
           </div>
-          <div className="grid grid-cols-6 gap-2">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-2">
             <img
               className="col-span-4 rounded-xl w-full h-full object-cover"
               src={Image}
@@ -114,18 +114,18 @@ const TripDetails = () => {
           </div>
           <hr className="text-gray-200 my-5" />
 
-          <div className="flex gap-5 items-center">
-            <p className="flex items-center gap-2 text-lg font-semibold">
-              <CiClock2 className="text-green-500" />
+          <div className="flex gap-1 md:gap-5 items-center">
+            <p className="flex items-center gap-1 text-lg font-semibold">
+              <CiClock2 className="text-green-500 text-5xl md:text-2xl" />
               {Duration} (approx.)
             </p>
             <p className="flex items-center gap-2 text-lg font-semibold">
-              <CiMobile1 className="text-green-500" />
+              <CiMobile1 className="text-green-500 text-5xl md:text-2xl" />
               Mobile Ticket
             </p>
             <p className="flex items-center gap-2 text-lg font-semibold">
-              <BiConversation className="text-green-500" />
-              Offered in : English
+              <BiConversation className="text-green-500 text-5xl md:text-2xl" />
+              Offered : English
             </p>
           </div>
           <hr className="text-gray-200 my-5" />
