@@ -9,7 +9,7 @@ import icon_2 from "../assets/reward.png";
 import icon_3 from "../assets/review.png";
 import icon_4 from "../assets/plan.png";
 import { Link } from "react-router-dom";
-import Trips from "../pages/Trips";
+import Trips from "../components/trips";
 
 const HomeLayout = () => {
   useEffect(() => {

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import RootLayout from "../layouts/RootLayout";
+import TripDetails from "../pages/TripDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,12 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <h1>This is register page</h1>,
-      },
+        },
+        {
+            path: "adventures/:title",
+            element: <TripDetails></TripDetails>,
+            loader : ()=> fetch(`tripData.json`)
+      }
     ],
   },
 ]);

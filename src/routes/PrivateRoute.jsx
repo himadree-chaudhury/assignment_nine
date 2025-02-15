@@ -1,3 +1,4 @@
+// *Tour Details
 
 const PrivateRoute = () => {
     return (
