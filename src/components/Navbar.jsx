@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-2 ">
           <FaRegUserCircle className="text-3xl" />
-          <Link>Log-in</Link>
+          <Link to={"login"}>Log-in</Link>
         </div>
       </div>
       {menu === false && (

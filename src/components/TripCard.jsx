@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const TripCard = ({ trip }) => {
-  const { ID,AdventureTitle, Image, EcoFriendlyFeatures} = trip;
+  const { AdventureTitle, Image, EcoFriendlyFeatures} = trip;
 
     // Mountain Treks, Wildlife Safaris, Forest Expeditions, Camping Retreats, Desert Exploration, Kayaking in Mangroves, Glacier Trekking, Snorkeling or Diving in Marine Reserves, Volcano Hiking 
     

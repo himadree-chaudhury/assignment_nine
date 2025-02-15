@@ -2,12 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import RootLayout from "../layouts/RootLayout";
 import TripDetails from "../pages/TripDetails";
+import ErrorPage from "../pages/ErrorPage";
+import Login from "../pages/login";
+import Register from "../pages/register";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
-    errorElement: <h1>Error</h1>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -15,11 +18,11 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <h1>This is login page</h1>,
+        element: <Login></Login>,
       },
       {
         path: "register",
-        element: <h1>This is register page</h1>,
+        element: <Register></Register>,
         },
         {
             path: "adventures/:title",

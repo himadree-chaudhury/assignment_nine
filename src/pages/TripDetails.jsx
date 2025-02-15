@@ -1,5 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom";
-import { CiClock2, CiMobile1, BiConversation } from "react-icons/ci";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import { CiClock2, CiMobile1 } from "react-icons/ci";
+import { BiConversation } from "react-icons/bi";
 
 const TripDetails = () => {
   const { title } = useParams();
@@ -54,8 +55,8 @@ const TripDetails = () => {
               src={Image}
               alt={AdventureTitle}
             />
-            <div className="col-span-2">
-              <div className="p-4 border border-gray-200 rounded-xl shadow-xl h-full flex flex-col">
+            <div className="col-span-2 ">
+              <div className="p-4 border border-gray-200 rounded-xl shadow-xl h-full flex flex-col space-y-3">
                 <div className="grow">
                   <h1 className="font-bold text-2xl">
                     From ${AdventureCost}{" "}
@@ -89,7 +90,7 @@ const TripDetails = () => {
                     Check Availability
                   </button>
                 </form>
-                <div className="bg-green-100 p-4 rounded-lg grow">
+                <div className="bg-green-100 p-4 rounded-lg grow space-y-3">
                   <p>
                     ✅
                     <span className="font-bold underline">
@@ -104,6 +105,9 @@ const TripDetails = () => {
                     </span>
                     - Secure your spot while staying flexible
                   </p>
+                  <Link className="px-6 py-2 flex justify-center text-white bg-green-800 font-semibold rounded-lg ">
+                    Talk with Expert
+                  </Link>
                 </div>
               </div>
             </div>
@@ -124,22 +128,25 @@ const TripDetails = () => {
               Offered in : English
             </p>
           </div>
+          <hr className="text-gray-200 my-5" />
         </div>
-        <h1>Overview</h1>
-        <p>{ShortDescription}</p>
-        <h1>Why Travelers Choose This Tour</h1>
-        <ul>
+        <h1 className="font-bold text-3xl my-3">Overview 🧾</h1>
+        <p className="leading-tight text-justify">{ShortDescription}</p>
+        <h1 className="font-bold text-2xl mt-16 mb-5">
+          Why Travelers Choose This Tour 🤔
+        </h1>
+        <ul className="list-disc ml-5">
           {EcoFriendlyFeatures.map((feature, idx) => (
             <li key={idx}>{feature}</li>
           ))}
         </ul>
-        <h1>What's Included?</h1>
+        <h1 className="font-bold text-2xl  mt-8 mb-5">What is Included? 🤷‍♂️</h1>
         {IncludedItems.map((item, idx) => (
-          <p key={idx}>{item}</p>
+          <p key={idx}>✅ {item}</p>
         ))}
-        <h1>Special Instruction</h1>
+        <h1 className="font-bold text-2xl mt-8 mb-5">Special Instruction ⚠️</h1>
         {SpecialInstructions.map((instruction, idx) => (
-          <p key={idx}>{instruction}</p>
+          <p key={idx}>❗{instruction}</p>
         ))}
       </section>
     </div>
