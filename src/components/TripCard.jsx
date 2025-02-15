@@ -26,7 +26,7 @@ const TripCard = ({ trip }) => {
         <h1 className="font-bold text-xl">{AdventureTitle}</h1>
       </div>
       <Link
-        to={`adventures/${AdventureTitle}`}
+        to={`/${AdventureTitle}`}
         className="px-6 py-2 text-white bg-green-800 font-semibold rounded-lg self-start"
       >
         Explore Now !

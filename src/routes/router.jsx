@@ -8,6 +8,7 @@ import Register from "../pages/register";
 import AuthLayout from "../layouts/AuthLayout";
 import PasswordReset from "../pages/PasswordReset";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -35,16 +36,24 @@ const router = createBrowserRouter([
             path: "/auth/resetPassword",
             element: <PasswordReset></PasswordReset>,
           },
+          {
+            path: "/auth/updateProfile",
+            element: (
+              <PrivateRoute>
+                <UpdateProfile></UpdateProfile>
+              </PrivateRoute>
+            ),
+          },
         ],
       },
       {
-        path: "adventures/:title",
+        path: "/:title",
         element: (
           <PrivateRoute>
             <TripDetails></TripDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch(`tripData.json`),
+        // loader: () => fetch(`tripData.json`),
       },
     ],
   },

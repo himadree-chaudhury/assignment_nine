@@ -12,7 +12,8 @@ const Login = () => {
   } = useContext(Context);
   const navigate = useNavigate();
     const location = useLocation();
-    console.log(location.state)
+    const URI = (decodeURIComponent(location.state) || "/");
+    // console.log(URI)
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -23,7 +24,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        navigate(location.state ? location.state : "/");
+        navigate(URI);
       })
       .catch((error) => {
         console.log(error);

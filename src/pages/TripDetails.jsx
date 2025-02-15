@@ -1,12 +1,21 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CiClock2, CiMobile1 } from "react-icons/ci";
 import { BiConversation } from "react-icons/bi";
+import { useContext, useState } from "react";
+import { Context } from "../provider/ContextProvider";
+// import { useEffect, useState } from "react";
 
 const TripDetails = () => {
+  const { tripsData } = useContext(Context);
   const { title } = useParams();
-  console.log(title);
-  const trips = useLoaderData();
-  const trip = trips.find((trip) => trip.AdventureTitle === title);
+
+  // const trips = useLoaderData();
+  // console.log(trips)
+  // if (!trips || !Array.isArray(trips)) {
+  //   return <p>Loading...</p>;
+  // }
+
+  const trip = tripsData.find((trip) => trip.AdventureTitle === title);
 
   const {
     AdventureTitle,
@@ -37,6 +46,19 @@ const TripDetails = () => {
     console.log(number);
   };
 
+
+const [showModal, setShowModal] = useState(false)
+  const handleExpertClick = () => {
+    const now = new Date()
+    const hours = now.getHours()
+    if (hours >= 10 && hours < 20) {
+      window.open("https://meet.google.com/new", "_blank");
+    }
+    else {
+      setShowModal(true)
+    }
+  }
+
   return (
     <div className="max-w-screen-2xl p-4 mx-auto">
       <section>
@@ -49,7 +71,7 @@ const TripDetails = () => {
             <p>|</p>
             <p>{Location}</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-6 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
             <img
               className="col-span-4 rounded-xl w-full h-full object-cover"
               src={Image}
@@ -105,7 +127,10 @@ const TripDetails = () => {
                     </span>
                     - Secure your spot while staying flexible
                   </p>
-                  <Link className="px-6 py-2 flex justify-center text-white bg-green-800 font-semibold rounded-lg ">
+                  <Link
+                    onClick={handleExpertClick}
+                    className="px-6 py-2 flex justify-center text-white bg-green-800 font-semibold rounded-lg "
+                  >
                     Talk with Expert
                   </Link>
                 </div>
@@ -149,6 +174,23 @@ const TripDetails = () => {
           <p key={idx}>❗{instruction}</p>
         ))}
       </section>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-md">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-lg font-semibold">Expert Consultation Hours</h2>
+            <p>
+              Our experts are available from <span className="font-bold underline">10:00 AM to 8:00 PM</span> (Local Time).
+            </p>
+            <p>Please Try then.</p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-4 px-4 py-2 bg-green-800 text-white rounded cursor-pointer"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -2,14 +2,14 @@ import { useContext } from "react";
 import { Context } from "../provider/ContextProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
+import Loading from "../pages/Loading";
 
 const PrivateRoute = ({ children }) => {
   const { user,loading } = useContext(Context);
-
   const location = useLocation();
 
     if (loading) {
-        return "wait"
+        return <Loading></Loading>
     }
   if (user) {
     return children;

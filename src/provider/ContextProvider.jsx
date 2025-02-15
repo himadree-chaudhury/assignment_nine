@@ -22,6 +22,7 @@ const ContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [emailField, setEmailField] = useState("");
+  const [tripsData,setTripsData]= useState([])
 
   const createNewUser = (email, password) => {
     setLoading(true)
@@ -66,6 +67,7 @@ const ContextProvider = ({ children }) => {
     setEmailField,
     loading,
     setLoading,
+    tripsData,
   };
 
   useEffect(() => {
@@ -78,6 +80,14 @@ const ContextProvider = ({ children }) => {
       unsubscribe();
     };
   }, []);
+
+  useEffect(() => {
+    fetch("tripData.json")
+      .then((res) => res.json())
+      .then((data) => setTripsData(data));
+  }, []);
+
+// console.log(tripsData)
 
   return <Context.Provider value={userInfo}>{children}</Context.Provider>;
 };
