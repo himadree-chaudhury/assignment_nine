@@ -132,9 +132,9 @@ const Login = () => {
             Do not have an account?
             <Link
               to={"/auth/register"}
-              className="text-green-500 cursor-pointer"
+              className="text-green-500 cursor-pointer pl-1"
             >
-              Sign Up
+               Sign Up
             </Link>
           </p>
 

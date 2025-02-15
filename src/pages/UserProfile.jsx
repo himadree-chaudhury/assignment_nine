@@ -28,7 +28,7 @@ const UserProfile = () => {
           </div>
           <div>
             <h1 className="font-extrabold text-5xl">
-              <span className="animate__animated animate__bounceInDown ">
+              <span className="animate__animated  animate__jackInTheBox ">
                 Hello,
               </span>
               <span className="block lg:text-7xl animate__animated animate__rotateInUpRight">
@@ -67,7 +67,10 @@ const UserProfile = () => {
           </div>
         </div>
         <div>
-          <Link to={"/auth/updateProfile"} className="text-white font-bold px-8 py-3 rounded-xl bg-green-800 hover:bg-green-700 cursor-pointer duration-300 transition-all">
+          <Link
+            to={"/auth/updateProfile"}
+            className="text-white font-bold px-8 py-3 rounded-xl bg-green-800 hover:bg-green-700 cursor-pointer duration-300 transition-all"
+          >
             Update Profile
           </Link>
         </div>

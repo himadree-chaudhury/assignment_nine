@@ -30,7 +30,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const updateUser = (updatedData) => {
-    setLoading(true);
+    // setLoading(true);
     return updateProfile(auth.currentUser, updatedData);
   };
 
@@ -50,7 +50,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const updateUserPassword = (email) => {
-    setLoading(true);
+    // setLoading(true);
     return sendPasswordResetEmail(auth, email);
   };
 
@@ -75,7 +75,7 @@ const ContextProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setTripsData(data));
   }, []);
-  
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);

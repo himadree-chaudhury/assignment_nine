@@ -180,7 +180,7 @@ const Register = () => {
           {/* Sign In Link */}
           <p className="text-center text-gray-700 text-sm">
             Do have an account?{" "}
-            <Link to="/auth/login" className="text-green-500 cursor-pointer">
+            <Link to="/auth/login" className="text-green-500 cursor-pointer pl-1">
               Sign In
             </Link>
           </p>
