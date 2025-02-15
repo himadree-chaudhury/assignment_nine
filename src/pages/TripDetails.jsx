@@ -28,7 +28,7 @@ const TripDetails = () => {
     e.preventDefault();
     const number = e.target.person.value;
     if (BookingAvailability) {
-      if (number > MaxGroupSize) {
+      if (number > MaxGroupSize || number < 0) {
         console.log(number);
       } else {
         console.log(number);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TripCard from "./tripCard";
@@ -45,7 +45,9 @@ const Trips = () => {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-bold text-2xl text-center my-5">Mountain Treks</h1>
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+        Mountain Treks
+      </h1>
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"
@@ -59,7 +61,9 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">Wildlife Safaris</h1>
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+        Wildlife Safaris
+      </h1>
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-left"
@@ -73,7 +77,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
         Forest Expeditions
       </h1>
       <div
@@ -89,7 +93,9 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">Camping Retreats</h1>
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+        Camping Retreats
+      </h1>
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-left"
@@ -103,7 +109,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
         Desert Exploration
       </h1>
       <div
@@ -119,7 +125,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
         Kayaking in Mangroves
       </h1>
       <div
@@ -135,7 +141,9 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">Glacier Trekking</h1>
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+        Glacier Trekking
+      </h1>
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"
@@ -149,7 +157,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
         Diving in Marine Reserves
       </h1>
       <div
@@ -165,7 +173,9 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5">Volcano Hiking</h1>
+      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+        Volcano Hiking
+      </h1>
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"

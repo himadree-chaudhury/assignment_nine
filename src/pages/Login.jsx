@@ -1,4 +1,4 @@
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -67,8 +67,8 @@ const Login = () => {
 
           {/* Sign Up Link */}
           <p className="text-center text-gray-700 text-sm">
-            Do not have an account?{" "}
-            <span className="text-green-500 cursor-pointer">Sign Up</span>
+            Do not have an account?
+            <Link className="text-green-500 cursor-pointer">Sign Up</Link>
           </p>
 
           <p className="text-center text-gray-500 text-sm">Or With</p>
@@ -76,7 +76,7 @@ const Login = () => {
           {/* Social Sign-In Buttons */}
           <div className="flex gap-3">
             <Link className="flex items-center justify-center w-full h-12 border border-gray-300 rounded-lg hover:border-green-500 transition">
-              <FaGoogle />
+              <FcGoogle className="text-xl" />
               <span className="ml-2">Google</span>
             </Link>
           </div>

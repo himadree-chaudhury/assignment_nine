@@ -1,4 +1,5 @@
-import { FaGoogle } from "react-icons/fa";
+
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -93,24 +94,24 @@ const Register = () => {
           </div>
 
           {/* Remember Me & Forgot Password */}
-          <div className="flex justify-between items-baseline text-sm text-gray-700">
+          <div className="text-sm text-gray-700">
             <div className="flex items-baseline gap-2">
               <input type="radio" className="" />
               <label>
-                Accept our Terms of Use, and Privacy & Cookies Statement.
+                Accept our <span className="text-green-500">Terms of Use</span>, and <span className="text-green-500">Privacy</span> & <span className="text-green-500">Cookies</span> Statement.
               </label>
             </div>
           </div>
 
           {/* Sign In Button */}
           <Link className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition">
-            Sign In
+            Register
           </Link>
 
           {/* Sign Up Link */}
           <p className="text-center text-gray-700 text-sm">
-            Do not have an account?{" "}
-            <span className="text-green-500 cursor-pointer">Sign Up</span>
+            Do have an account?{" "}
+            <Link className="text-green-500 cursor-pointer">Sign In</Link>
           </p>
 
           <p className="text-center text-gray-500 text-sm">Or With</p>
@@ -118,7 +119,7 @@ const Register = () => {
           {/* Social Sign-In Buttons */}
           <div className="flex gap-3">
             <Link className="flex items-center justify-center w-full h-12 border border-gray-300 rounded-lg hover:border-green-500 transition">
-              <FaGoogle />
+              <FcGoogle className="text-xl"/>
               <span className="ml-2">Google</span>
             </Link>
           </div>

@@ -8,19 +8,29 @@ const TripCard = ({ trip }) => {
     
   return (
     <div className="space-y-3 flex flex-col">
-          <div>
-            <img className="h-40 w-full object-cover" src={Image} alt={AdventureTitle} />
-          </div>
-          <div className="grow">
-            {EcoFriendlyFeatures.map((feature, idx) => (
-              <span key={idx} className="text-sm pr-1">
-                {feature}
-              </span>
-            ))}
-            <h1 className="font-bold text-xl">{AdventureTitle}</h1>
-          </div>
-          <Link to={`adventures/${AdventureTitle}`} className="text-black bg-green-300 px-8 py-2 rounded-lg self-start">Explore Now !</Link>
-
+      <div className="">
+        <img
+          className="h-40 w-full object-cover"
+          src={Image}
+          alt={AdventureTitle}
+        />
+      </div>
+      <div className="grow">
+        <div className="text-sm leading-tight text-gray-700 grow">
+          {EcoFriendlyFeatures.map((feature, idx) => (
+            <span key={idx} className=" pr-3 ">
+              * {feature}
+            </span>
+          ))}
+        </div>
+        <h1 className="font-bold text-xl">{AdventureTitle}</h1>
+      </div>
+      <Link
+        to={`adventures/${AdventureTitle}`}
+        className="px-6 py-2 text-white bg-green-800 font-semibold rounded-lg self-start"
+      >
+        Explore Now !
+      </Link>
     </div>
   );
 };

@@ -12,11 +12,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Zero Waste Policy",
-      "Carbon Offset Program",
-      "Solar-Powered Charging Stations",
-      "Reusable Utensils",
-      "Composting Initiatives"
+      "Zero waste policy",
+      "Carbon offset program",
+      "Solar charging stations",
+      "Reusable utensils",
+      "Composting bins"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -37,11 +37,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Jeep Safari", "Meals", "Park Fees"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Vehicles",
-      "No Single-Use Plastics",
-      "Anti-Poaching Efforts",
-      "Eco-Friendly Safari Lodges",
-      "Water Purification Systems"
+      "Solar vehicles",
+      "No plastic waste",
+      "Wildlife protection",
+      "Eco-friendly lodges",
+      "Water filters"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Binoculars recommended", "Early morning starts"]
@@ -59,11 +59,11 @@
     "AdventureLevel": "Intermediate",
     "IncludedItems": ["Guided Tour", "Boat Rides", "Meals"],
     "EcoFriendlyFeatures": [
-      "Biodegradable Products",
-      "Local Guides",
-      "Reforestation Projects",
-      "Eco-Friendly Toiletries",
-      "Low-Impact Hiking Trails"
+      "Biodegradable products",
+      "Local tour guides",
+      "Tree planting",
+      "Eco toiletries",
+      "Marked hiking trails"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": [
@@ -84,11 +84,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Tents", "Meals", "Camel Ride"],
     "EcoFriendlyFeatures": [
-      "Reusable Water Bottles",
-      "Minimal Impact Camping",
-      "Solar Lanterns",
-      "Waste Segregation",
-      "Cultural Preservation Initiatives"
+      "Reusable bottles",
+      "Low-impact camping",
+      "Solar lanterns",
+      "Recycling bins",
+      "Cultural preservation"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Warm clothing for nights", "Sunscreen"]
@@ -105,11 +105,11 @@
     "Duration": "4 days",
     "AdventureLevel": "Moderate",
     "IncludedItems": [
-      "Non-Invasive Exploration",
-      "Eco-Friendly Sunscreen",
-      "Marine Life Protection",
-      "Kayak Cleanup Drives",
-      "Plastic-Free Packaging"
+      "Non-invasive tourism",
+      "Reef-safe sunscreen",
+      "Marine conservation",
+      "Plastic-free tours",
+      "Biodegradable packaging"
     ],
     "EcoFriendlyFeatures": [
       "Non-Invasive Exploration Techniques",
@@ -137,11 +137,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Crampons", "Ice Axe", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Leave No Trace Principles",
-      "Sustainable Tourism Practices",
-      "Glacier Preservation Efforts",
-      "Eco-Friendly Gear Rentals",
-      "Carbon-Neutral Transportation"
+      "Leave no trace",
+      "Eco travel tips",
+      "Glacier protection",
+      "Rental eco-gear",
+      "Carbon-neutral transport"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Physical fitness required", "Thermal clothing"]
@@ -159,11 +159,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Snorkeling Gear", "Boat Rides", "Meals"],
     "EcoFriendlyFeatures": [
-      "Reef-Safe Sunscreen",
-      "Marine Conservation Fees",
-      "Coral Restoration Projects",
-      "Eco-Friendly Snorkeling Gear",
-      "Sustainable Seafood Practices"
+      "Coral restoration",
+      "Sustainable seafood",
+      "Eco snorkel gear",
+      "Turtle protection",
+      "Marine fees"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Swimming skills required", "Respect marine life"]
@@ -181,11 +181,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Guided Tour", "Safety Gear", "Meals"],
     "EcoFriendlyFeatures": [
-      "Geothermal Energy Use",
-      "Low-Impact Footwear",
-      "Volcanic Soil Restoration",
-      "Eco-Friendly Accommodations",
-      "Local Community Support"
+      "Geothermal energy",
+      "Low-impact footwear",
+      "Volcanic soil care",
+      "Eco resorts",
+      "Local fair trade"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": ["Sturdy hiking boots", "Weather-appropriate gear"]
@@ -203,11 +203,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["4x4 Vehicle", "Meals", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Campsites",
-      "Recycling Program",
-      "Desert Flora Protection",
-      "Water Conservation Systems",
-      "Eco-Friendly Transportation"
+      "Solar campsites",
+      "Desert flora care",
+      "Water-saving tech",
+      "Eco transport",
+      "Recycling stations"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Hat and sunglasses", "Hydration packs"]
@@ -225,11 +225,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Tree Preservation Efforts",
-      "Eco-Friendly Trails",
-      "Wildlife Corridors",
-      "Sustainable Forestry Practices",
-      "Green Energy Use"
+      "Tree conservation",
+      "Eco trails",
+      "Wildlife corridors",
+      "Sustainable forestry",
+      "Green energy"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Comfortable walking shoes", "Camera for photos"]
@@ -247,11 +247,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Zero Waste Policy",
-      "Carbon Offset Program",
-      "Solar-Powered Charging Stations",
-      "Eco-Friendly Toilets",
-      "Composting Initiatives"
+      "Zero plastic policy",
+      "Green waste program",
+      "Eco toilets",
+      "Solar power",
+      "Compost systems"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": [
@@ -272,11 +272,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Jeep Safari", "Meals", "Park Fees"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Vehicles",
-      "No Single-Use Plastics",
-      "Anti-Poaching Efforts",
-      "Eco-Friendly Safari Lodges",
-      "Water Purification Systems"
+      "Electric safari cars",
+      "Plastic-free areas",
+      "Poaching prevention",
+      "Nature-friendly stays",
+      "Water purification"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Binoculars recommended", "Early morning starts"]
@@ -294,11 +294,11 @@
     "AdventureLevel": "Intermediate",
     "IncludedItems": ["Guided Tour", "Boat Rides", "Meals"],
     "EcoFriendlyFeatures": [
-      "Biodegradable Products",
-      "Local Guides",
-      "Rainforest Conservation",
-      "Eco-Friendly Insect Repellent",
-      "Sustainable Farming Support"
+      "Eco insect repellent",
+      "Rainforest care",
+      "Locally sourced food",
+      "Community tourism",
+      "Fair trade crafts"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -319,11 +319,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Tents", "Meals", "Camel Ride"],
     "EcoFriendlyFeatures": [
-      "Reusable Water Bottles",
-      "Minimal Impact Camping",
-      "Solar-Powered Showers",
-      "Waste Management Systems",
-      "Cultural Heritage Preservation"
+      "Solar showers",
+      "Compostable products",
+      "Waste management",
+      "Cultural heritage sites",
+      "Sustainable farming"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Warm clothing for nights", "Sunscreen"]
@@ -341,11 +341,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Kayak Rental", "Life Jackets", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Non-Invasive Exploration Techniques",
-      "Eco-Friendly Sunscreen Options",
-      "Mangrove Restoration Projects",
-      "Plastic-Free Tours",
-      "Sustainable Fishing Practices"
+      "Mangrove restoration",
+      "Plastic-free beaches",
+      "Low-impact fishing",
+      "Ocean cleanup dives",
+      "Biodegradable bags"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -366,11 +366,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Crampons", "Ice Axe", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Leave No Trace Principles",
-      "Sustainable Tourism Practices",
-      "Glacier Monitoring Programs",
-      "Eco-Friendly Gear Rentals",
-      "Carbon-Neutral Travel"
+      "Eco-friendly gear",
+      "Carbon-free transport",
+      "Climate-neutral stays",
+      "Nature-based tourism",
+      "Wildlife education"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Physical fitness required", "Thermal clothing"]
@@ -388,11 +388,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Snorkeling Gear", "Boat Rides", "Meals"],
     "EcoFriendlyFeatures": [
-      "Reef-Safe Sunscreen",
-      "Marine Conservation Fees",
-      "Turtle Protection Programs",
-      "Eco-Friendly Snorkeling Gear",
-      "Sustainable Seafood Practices"
+      "Dolphin-safe policies",
+      "Seagrass restoration",
+      "Reusable diving gear",
+      "Sustainable boating",
+      "Wildlife rescue support"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Swimming skills required", "Respect marine life"]
@@ -410,11 +410,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Guided Tour", "Safety Gear", "Meals"],
     "EcoFriendlyFeatures": [
-      "Geothermal Energy Use",
-      "Low-Impact Footwear",
-      "Volcanic Ash Recycling",
-      "Eco-Friendly Accommodations",
-      "Local Artisan Support"
+      "Volcanic ash reuse",
+      "Eco-friendly roads",
+      "Renewable energy",
+      "Local sustainability",
+      "Nature-friendly housing"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": ["Sturdy hiking boots", "Weather-appropriate gear"]
@@ -432,11 +432,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["4x4 Vehicle", "Meals", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Campsites",
-      "Recycling Program",
-      "Desert Flora Protection",
-      "Water Conservation Systems",
-      "Eco-Friendly Transportation"
+      "Desert conservation",
+      "Solar energy use",
+      "Wildlife-safe tourism",
+      "Greywater recycling",
+      "Eco travel options"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Hat and sunglasses", "Hydration packs"]
@@ -454,11 +454,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Tree Preservation Efforts",
-      "Eco-Friendly Trails",
-      "Wildlife Corridors",
-      "Sustainable Forestry Practices",
-      "Green Energy Use"
+      "Carbon-free hiking",
+      "Wildflower protection",
+      "Sustainable logging",
+      "Tree planting drives",
+      "Green travel practices"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Comfortable walking shoes", "Camera for photos"]
@@ -476,11 +476,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Zero Waste Policy",
-      "Carbon Offset Program",
-      "Solar-Powered Charging Stations",
-      "Eco-Friendly Toilets",
-      "Composting Initiatives"
+      "Sustainable water use",
+      "Eco-friendly waste bins",
+      "Solar-powered kitchens",
+      "Organic farming",
+      "Bamboo-based products"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -501,11 +501,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Jeep Safari", "Meals", "Park Fees"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Vehicles",
-      "No Single-Use Plastics",
-      "Anti-Poaching Efforts",
-      "Eco-Friendly Safari Lodges",
-      "Water Purification Systems"
+      "Clean water projects",
+      "Wildlife cameras",
+      "Low-energy lighting",
+      "Eco-responsible farming",
+      "Plastic alternatives"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Binoculars recommended", "Early morning starts"]
@@ -523,11 +523,11 @@
     "AdventureLevel": "Intermediate",
     "IncludedItems": ["Guided Tour", "Survival Gear", "Meals"],
     "EcoFriendlyFeatures": [
-      "Biodegradable Products",
-      "Local Guides",
-      "Rainforest Conservation",
-      "Eco-Friendly Insect Repellent",
-      "Sustainable Farming Support"
+      "Rainwater collection",
+      "Fair-wage local jobs",
+      "Tree nursery programs",
+      "Natural pest control",
+      "Biofuel energy"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -548,11 +548,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Tents", "Meals", "Camel Ride"],
     "EcoFriendlyFeatures": [
-      "Reusable Water Bottles",
-      "Minimal Impact Camping",
-      "Solar-Powered Showers",
-      "Waste Management Systems",
-      "Cultural Heritage Preservation"
+      "Sustainable fishing",
+      "Coral reef education",
+      "Recyclable packaging",
+      "Wildlife tracking",
+      "Renewable tech"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Warm clothing for nights", "Sunscreen"]
@@ -570,11 +570,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Kayak Rental", "Life Jackets", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Non-Invasive Exploration Techniques",
-      "Eco-Friendly Sunscreen Options",
-      "Mangrove Restoration Projects",
-      "Plastic-Free Tours",
-      "Sustainable Fishing Practices"
+      "Solar cooking",
+      "Eco water transport",
+      "Organic food waste reuse",
+      "Green construction",
+      "Biodegradable soap"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -595,11 +595,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Crampons", "Ice Axe", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Leave No Trace Principles",
-      "Sustainable Tourism Practices",
-      "Glacier Monitoring Programs",
-      "Eco-Friendly Gear Rentals",
-      "Carbon-Neutral Travel"
+      "Reforestation plans",
+      "Wildlife crossings",
+      "Sustainable guest stays",
+      "Pollution reduction",
+      "Low-impact lighting"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Physical fitness required", "Thermal clothing"]
@@ -617,11 +617,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Snorkeling Gear", "Boat Rides", "Meals"],
     "EcoFriendlyFeatures": [
-      "Reef-Safe Sunscreen",
-      "Marine Conservation Fees",
-      "Turtle Protection Programs",
-      "Eco-Friendly Snorkeling Gear",
-      "Sustainable Seafood Practices"
+      "No-waste picnics",
+      "Handmade natural products",
+      "Eco-friendly event spaces",
+      "Toxin-free cleaning",
+      "Sea turtle protection"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Swimming skills required", "Respect marine life"]
@@ -639,11 +639,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Guided Tour", "Safety Gear", "Meals"],
     "EcoFriendlyFeatures": [
-      "Geothermal Energy Use",
-      "Low-Impact Footwear",
-      "Volcanic Ash Recycling",
-      "Eco-Friendly Accommodations",
-      "Local Artisan Support"
+      "Vegetation restoration",
+      "Compost toilets",
+      "Nature-friendly paths",
+      "Electric boat rentals",
+      "Hybrid transport"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": ["Sturdy hiking boots", "Weather-appropriate gear"]
@@ -661,11 +661,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["4x4 Vehicle", "Meals", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Campsites",
-      "Recycling Program",
-      "Desert Flora Protection",
-      "Water Conservation Systems",
-      "Eco-Friendly Transportation"
+      "Plastic-free camping",
+      "Solar-powered rest stops",
+      "Native plant gardens",
+      "Eco firewood sources",
+      "Clean air initiatives"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Hat and sunglasses", "Hydration packs"]
@@ -683,11 +683,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Tree Preservation Efforts",
-      "Eco-Friendly Trails",
-      "Wildlife Corridors",
-      "Sustainable Forestry Practices",
-      "Green Energy Use"
+      "Hydroelectric energy",
+      "No-waste events",
+      "Water-efficient gardens",
+      "Sustainable hunting bans",
+      "Organic cotton use"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Comfortable walking shoes", "Camera for photos"]
@@ -705,11 +705,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Zero Waste Policy",
-      "Carbon Offset Program",
-      "Solar-Powered Charging Stations",
-      "Eco-Friendly Toilets",
-      "Composting Initiatives"
+      "Sustainable gift shops",
+      "Carbon-free bike paths",
+      "Eco-art installations",
+      "Recyclable camping gear",
+      "Solar-heated pools"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -730,11 +730,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Mokoro Ride", "Meals", "Park Fees"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Camps",
-      "No Single-Use Plastics",
-      "Anti-Poaching Efforts",
-      "Eco-Friendly Lodges",
-      "Water Recycling Systems"
+      "Paper-free policies",
+      "Locally made souvenirs",
+      "Eco construction methods",
+      "Low-water irrigation",
+      "Green job training"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Binoculars recommended", "Early morning starts"]
@@ -752,11 +752,11 @@
     "AdventureLevel": "Intermediate",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Biodegradable Products",
-      "Local Guides",
-      "Rainforest Conservation",
-      "Eco-Friendly Insect Repellent",
-      "Sustainable Farming Support"
+      "Tidal energy research",
+      "Safe animal corridors",
+      "Zero plastic souvenirs",
+      "Filtered drinking stations",
+      "Sustainable fishing gear"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -777,11 +777,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Tents", "Meals", "Jeep Rides"],
     "EcoFriendlyFeatures": [
-      "Reusable Water Bottles",
-      "Minimal Impact Camping",
-      "Solar Lanterns",
-      "Waste Segregation",
-      "Cultural Preservation Initiatives"
+      "Green waste pickup",
+      "Compostable packaging",
+      "Non-toxic paint use",
+      "Sustainable decor",
+      "Eco printing services"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Warm clothing for nights", "Sunscreen"]
@@ -799,11 +799,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Kayak Rental", "Life Jackets", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Non-Invasive Exploration Techniques",
-      "Reef-Safe Sunscreen Options",
-      "Marine Life Conservation Programs",
-      "Kayak Eco-Cleanup Events",
-      "Biodegradable Packaging Solutions"
+      "Wildlife-safe fencing",
+      "Eco-friendly mining",
+      "Solar-heated showers",
+      "Low-impact adventure sports",
+      "Biodegradable fishing nets"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": [
@@ -824,11 +824,11 @@
     "AdventureLevel": "Advanced",
     "IncludedItems": ["Crampons", "Ice Axe", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Leave No Trace Principles",
-      "Sustainable Tourism Practices",
-      "Glacier Preservation Efforts",
-      "Eco-Friendly Gear Rentals",
-      "Carbon-Neutral Travel"
+      "Sustainable beach resorts",
+      "Tree-free paper products",
+      "No-toxic sunscreen rules",
+      "Eco-volunteering options",
+      "Wildlife-safe tourism"
     ],
     "MaxGroupSize": 8,
     "SpecialInstructions": ["Physical fitness required", "Thermal clothing"]
@@ -846,11 +846,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Snorkeling Gear", "Boat Rides", "Meals"],
     "EcoFriendlyFeatures": [
-      "Reef-Safe Sunscreen",
-      "Marine Conservation Fees",
-      "Coral Restoration Projects",
-      "Eco-Friendly Snorkeling Gear",
-      "Sustainable Seafood Practices"
+      "Forest restoration",
+      "Zero carbon taxis",
+      "Eco-friendly event catering",
+      "Solar-powered air conditioning",
+      "Energy-efficient stoves"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Swimming skills required", "Respect marine life"]
@@ -868,11 +868,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["Guided Tour", "Safety Gear", "Meals"],
     "EcoFriendlyFeatures": [
-      "Geothermal Energy Use",
-      "Low-Impact Footwear",
-      "Volcanic Soil Restoration",
-      "Eco-Friendly Accommodations",
-      "Local Community Support"
+      "Thermal window insulation",
+      "Wildlife-friendly bridges",
+      "Solar-powered water pumps",
+      "Renewable energy-powered lifts",
+      "Urban compost hubs"
     ],
     "MaxGroupSize": 10,
     "SpecialInstructions": ["Sturdy hiking boots", "Weather-appropriate gear"]
@@ -890,11 +890,11 @@
     "AdventureLevel": "Moderate",
     "IncludedItems": ["4x4 Vehicle", "Meals", "Guided Tour"],
     "EcoFriendlyFeatures": [
-      "Solar-Powered Campsites",
-      "Recycling Program",
-      "Desert Flora Protection",
-      "Water Conservation Systems",
-      "Eco-Friendly Transportation"
+      "Smart eco-lighting",
+      "Sustainable wood usage",
+      "Permaculture farming",
+      "Hybrid hiking gear",
+      "Bio-based plastics"
     ],
     "MaxGroupSize": 12,
     "SpecialInstructions": ["Hat and sunglasses", "Hydration packs"]
@@ -912,11 +912,11 @@
     "AdventureLevel": "Easy",
     "IncludedItems": ["Guided Tour", "Meals", "Camping Gear"],
     "EcoFriendlyFeatures": [
-      "Tree Preservation Efforts",
-      "Eco-Friendly Trails",
-      "Wildlife Corridors",
-      "Sustainable Forestry Practices",
-      "Green Energy Use"
+      "Eco-friendly ink printing",
+      "Organic gardening practices",
+      "Local food co-ops",
+      "Wave energy research",
+      "Zero-impact trails"
     ],
     "MaxGroupSize": 15,
     "SpecialInstructions": ["Comfortable walking shoes", "Camera for photos"]
