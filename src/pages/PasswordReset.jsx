@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../provider/ContextProvider";
+import { useNavigate } from "react-router-dom";
 
 const PasswordReset = () => {
-  const { updateUserPassword } = useContext(Context);
-
+  const { updateUserPassword, emailField } = useContext(Context);
+  const navigate = useNavigate();
   const handlePasswordReset = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
@@ -12,11 +13,14 @@ const PasswordReset = () => {
     updateUserPassword(email)
       .then(() => {
         console.log("Great");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
+  const [emailValue, setEmailValue] = useState(emailField || "");
 
   return (
     <section className="max-w-screen-2xl p-4 mx-auto">
@@ -47,6 +51,8 @@ const PasswordReset = () => {
               <input
                 type="email"
                 name="email"
+                value={emailValue}
+                onChange={(e) => setEmailValue(e.target.value)}
                 placeholder="Enter your Email"
                 className="ml-3 border-none outline-none w-full"
               />

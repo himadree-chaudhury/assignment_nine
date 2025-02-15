@@ -1,11 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const Login = () => {
-  const { userLogIn, createUserWithGoogle, setUser} =
-    useContext(Context);
+  const {
+    userLogIn,
+    createUserWithGoogle,
+    setUser,
+    emailField,
+    setEmailField,
+  } = useContext(Context);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -16,6 +23,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -35,7 +43,10 @@ const Login = () => {
       });
   };
 
-
+  const emailOnChange = (e) => {
+    const email = e.target.value;
+    setEmailField(email);
+  };
 
   return (
     <section className="max-w-screen-2xl p-4 mx-auto">
@@ -46,7 +57,9 @@ const Login = () => {
             <p className="text-center ">Log-in and get in touch.</p>
             {/* Email Input */}
             <div className="flex flex-col">
-              <label className="text-gray-700 font-semibold">Email</label>
+              <label className="text-gray-700 font-semibold">
+                Email <span className="text-red-500">*</span>
+              </label>
             </div>
             <div className="flex items-center border border-gray-300 rounded-lg h-12 px-3 transition focus-within:border-green-500">
               <svg
@@ -62,14 +75,18 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
+                onChange={emailOnChange}
                 placeholder="Enter your Email"
                 className="ml-3 border-none outline-none w-full"
+                required
               />
             </div>
 
             {/* Password Input */}
             <div className="flex flex-col">
-              <label className="text-gray-700 font-semibold">Password</label>
+              <label className="text-gray-700 font-semibold">
+                Password <span className="text-red-500">*</span>
+              </label>
             </div>
             <div className="flex items-center border border-gray-300 rounded-lg h-12 px-3 transition focus-within:border-green-500">
               <svg
@@ -86,6 +103,7 @@ const Login = () => {
                 name="password"
                 placeholder="Enter your Password"
                 className="ml-3 border-none outline-none w-full"
+                required
               />
             </div>
 
@@ -95,7 +113,9 @@ const Login = () => {
                 <input type="radio" className="mr-1" />
                 <label>Remember me</label>
               </div>
-              <Link to={"/auth/resetPassword"} className="text-green-500">Forgot password?</Link>
+              <Link to={"/auth/resetPassword"} className="text-green-500">
+                Forgot password?
+              </Link>
             </div>
 
             {/* Sign In Button */}

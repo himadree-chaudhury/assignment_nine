@@ -20,6 +20,7 @@ const provider = new GoogleAuthProvider();
 
 const ContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [emailField, setEmailField] = useState("");
 
   const createNewUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -54,6 +55,8 @@ const ContextProvider = ({ children }) => {
     userLogIn,
     userLogOut,
     updateUserPassword,
+    emailField,
+    setEmailField,
   };
 
   useEffect(() => {
