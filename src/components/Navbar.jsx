@@ -8,17 +8,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-
 const Navbar = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
-      useEffect(() => {
-        AOS.init();
-      }, []);
-    
-    const [menu, setMenu] = useState(true)
-    const menuStyle = () => {
-        setMenu(!menu)
-    }
+  const [menu, setMenu] = useState(true);
+  const menuStyle = () => {
+    setMenu(!menu);
+  };
 
   return (
     <div className="max-w-screen-2xl p-4 mx-auto font-semibold">
@@ -39,11 +37,11 @@ const Navbar = () => {
           <Link to={"/"}>Home</Link>
           <Link>Discover</Link>
           <Link>Update Profile</Link>
-          <Link to={"register"}>Register</Link>
+          <Link to={"auth/register"}>Register</Link>
         </div>
         <div className="flex items-center gap-2 ">
           <FaRegUserCircle className="text-3xl" />
-          <Link to={"login"}>Log-in</Link>
+          <Link to={"auth/login"}>Log-in</Link>
         </div>
       </div>
       {menu === false && (

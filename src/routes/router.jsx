@@ -5,7 +5,7 @@ import TripDetails from "../pages/TripDetails";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/login";
 import Register from "../pages/register";
-
+import AuthLayout from "../layouts/AuthLayout";
 
 const router = createBrowserRouter([
   {
@@ -18,18 +18,24 @@ const router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>,
       },
       {
-        path: "login",
-        element: <Login></Login>,
+        path: "auth",
+        element: <AuthLayout></AuthLayout>,
+        children: [
+          {
+            path: "/auth/login",
+            element: <Login></Login>,
+          },
+          {
+            path: "/auth/register",
+            element: <Register></Register>,
+          },
+        ],
       },
       {
-        path: "register",
-        element: <Register></Register>,
-        },
-        {
-            path: "adventures/:title",
-            element: <TripDetails></TripDetails>,
-            loader : ()=> fetch(`tripData.json`)
-      }
+        path: "adventures/:title",
+        element: <TripDetails></TripDetails>,
+        loader: () => fetch(`tripData.json`),
+      },
     ],
   },
 ]);
