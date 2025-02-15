@@ -20,31 +20,38 @@ const provider = new GoogleAuthProvider();
 
 const ContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [emailField, setEmailField] = useState("");
 
   const createNewUser = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const updateUser = (updatedData) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, updatedData);
   };
 
   const createUserWithGoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, provider);
   };
 
   const userLogIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const userLogOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
   const updateUserPassword = (email) => {
-    return sendPasswordResetEmail(auth,email)
-  }
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
+  };
 
   const userInfo = {
     user,
@@ -57,11 +64,14 @@ const ContextProvider = ({ children }) => {
     updateUserPassword,
     emailField,
     setEmailField,
+    loading,
+    setLoading,
   };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false)
       // console.log(currentUser);
     });
     return () => {

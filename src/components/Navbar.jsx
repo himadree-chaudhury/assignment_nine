@@ -59,9 +59,19 @@ const Navbar = () => {
             <FaRegUserCircle className="text-3xl" />
           )}
           {user ? (
-            <Link onClick={userLogOut} className="border border-green-400 px-3 py-1 rounded-lg hover:bg-green-800 hover:text-white hover:text-bold transition-all duration-200 hover:border-green-800">Log-Out</Link>
+            <Link
+              onClick={userLogOut}
+              className="border border-green-400 px-3 py-1 rounded-lg hover:bg-green-800 hover:text-white hover:text-bold transition-all duration-200 hover:border-green-800"
+            >
+              Log-Out
+            </Link>
           ) : (
-            <Link to={"auth/login"}>Log-In</Link>
+            <Link
+              className="border border-green-400 px-3 py-1 rounded-lg hover:bg-green-800 hover:text-white hover:text-bold transition-all duration-200 hover:border-green-800"
+              to={"auth/login"}
+            >
+              Log-In
+            </Link>
           )}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
@@ -8,11 +8,11 @@ const Login = () => {
     userLogIn,
     createUserWithGoogle,
     setUser,
-    emailField,
     setEmailField,
   } = useContext(Context);
   const navigate = useNavigate();
-  const location = useLocation();
+    const location = useLocation();
+    console.log(location.state)
 
   const handleSignIn = (e) => {
     e.preventDefault();
