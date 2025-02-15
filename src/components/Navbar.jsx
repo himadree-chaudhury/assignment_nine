@@ -3,10 +3,11 @@ import logo from "../assets/ecoquest-logo.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiMenu2Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Context } from "../provider/ContextProvider";
 
 const Navbar = () => {
   useEffect(() => {
@@ -17,6 +18,8 @@ const Navbar = () => {
   const menuStyle = () => {
     setMenu(!menu);
   };
+
+  const { user, userLogOut } = useContext(Context);
 
   return (
     <div className="max-w-screen-2xl p-4 mx-auto font-semibold">
@@ -40,8 +43,26 @@ const Navbar = () => {
           <Link to={"auth/register"}>Register</Link>
         </div>
         <div className="flex items-center gap-2 ">
-          <FaRegUserCircle className="text-3xl" />
-          <Link to={"auth/login"}>Log-in</Link>
+          {user ? (
+            user.photoURL && (
+              <div className="group relative inline-block">
+                <img
+                  className={`w-[2rem] h-[2rem] object-cover rounded-full`}
+                  src={user.photoURL}
+                />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm px-2 py-1 rounded whitespace-nowrap z-10">
+                  {user.displayName}
+                </div>
+              </div>
+            )
+          ) : (
+            <FaRegUserCircle className="text-3xl" />
+          )}
+          {user ? (
+            <Link onClick={userLogOut}>Log-Out</Link>
+          ) : (
+            <Link to={"auth/login"}>Log-In</Link>
+          )}
         </div>
       </div>
       {menu === false && (
