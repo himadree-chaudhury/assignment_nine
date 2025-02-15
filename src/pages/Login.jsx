@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
 
 const Login = () => {
-  const { userLogIn, setUser } = useContext(Context);
+  const { userLogIn, createUserWithGoogle, setUser} =
+    useContext(Context);
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -22,6 +23,19 @@ const Login = () => {
 
     // console.log(email,password)
   };
+
+  const handleGoogleLogIn = () => {
+    createUserWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+
 
   return (
     <section className="max-w-screen-2xl p-4 mx-auto">
@@ -81,13 +95,13 @@ const Login = () => {
                 <input type="radio" className="mr-1" />
                 <label>Remember me</label>
               </div>
-              <Link className="text-green-500">Forgot password?</Link>
+              <Link to={"/auth/resetPassword"} className="text-green-500">Forgot password?</Link>
             </div>
 
             {/* Sign In Button */}
             <button
               type="submit"
-              className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition"
+              className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition cursor-pointer"
             >
               Sign In
             </button>
@@ -107,7 +121,10 @@ const Login = () => {
 
           {/* Social Sign-In Buttons */}
           <div className="flex gap-3">
-            <Link className="flex items-center justify-center w-full h-12 border border-gray-300 rounded-lg hover:border-green-500 transition">
+            <Link
+              onClick={handleGoogleLogIn}
+              className="flex items-center justify-center w-full h-12 border border-gray-300 rounded-lg hover:border-green-500 transition"
+            >
               <FcGoogle className="text-xl" />
               <span className="ml-2">Google</span>
             </Link>

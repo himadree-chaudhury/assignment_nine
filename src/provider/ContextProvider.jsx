@@ -10,6 +10,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -40,6 +41,10 @@ const ContextProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  const updateUserPassword = (email) => {
+    return sendPasswordResetEmail(auth,email)
+  }
+
   const userInfo = {
     user,
     setUser,
@@ -47,13 +52,14 @@ const ContextProvider = ({ children }) => {
     updateUser,
     createUserWithGoogle,
     userLogIn,
-    userLogOut
+    userLogOut,
+    updateUserPassword,
   };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log(currentUser);
+      // console.log(currentUser);
     });
     return () => {
       unsubscribe();
