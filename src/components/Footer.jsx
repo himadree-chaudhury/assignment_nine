@@ -42,7 +42,7 @@ const Footer = () => {
               <FaGithub />
             </a>
           </div>
-          <div className="flex justify-center items-center gap-5 py-5">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-5 py-5">
             <p className="flex items-center text-yellow-400">
               <FaStar />
               <FaStar />
@@ -57,7 +57,7 @@ const Footer = () => {
               </span>
             </h1>
           </div>
-          <div className="grid grid-cols-4 font-bold py-5">
+          <div className="grid grid-cols-2  md:grid-cols-4 gap-5 font-bold py-5">
             <div className="grid space-y-5">
               <Link>Help Center</Link>
               <Link>Privacy & Cookies Statement</Link>
@@ -77,7 +77,7 @@ const Footer = () => {
               <Link>Ecoquest Blog</Link>
             </div>
           </div>
-          <hr className="py-5 text-gray-300" />
+          <hr className="text-gray-300" />
           <div className="py-5">
             <div className="flex flex-col lg:flex-row gap-5 items-start justify-between lg:items-center">
               <div className="flex gap-2.5">
@@ -134,11 +134,11 @@ const Footer = () => {
                 </button>
               </div>
 
-              <div className="flex gap-5 font-bold text-sm leading-tight">
-                <h1>&copy; 1997-2025 EcoQuest, Inc</h1>
+              <div className="flex flex-col md:flex-row gap-5 font-bold text-sm leading-tight">
                 <Link>Terms & Conditions</Link>
                 <Link>How EcoQuest Works</Link>
                 <Link>Cookie Constant</Link>
+                <h1>&copy; 1997-2025 EcoQuest, Inc</h1>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import Header from "../components/Header";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import icon_1 from "../assets/support.png";
 import icon_2 from "../assets/reward.png";
@@ -11,11 +11,14 @@ import icon_4 from "../assets/plan.png";
 import { Link } from "react-router-dom";
 import Trips from "../components/trips";
 import Stories from "../components/Stories";
+import { Context } from "../provider/ContextProvider";
 
 const HomeLayout = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  const { user, userLogOut } = useContext(Context);
+  console.log(user);
 
   return (
     <div className="">
@@ -75,16 +78,47 @@ const HomeLayout = () => {
         <div className="bg-gray-200 p-1 rounded-md">
           <div className="text-center my-5 space-y-3">
             <h1 className="font-bold text-3xl">
-              Log in to manage bookings & EcoQuest Rewards
+              {user
+                ? `Welcome ${user.displayName}`
+                : "Log in to manage bookings & EcoQuest Rewards"}
             </h1>
-            <p>
-              Do not have an account yet?
-              <Link className="font-semibold px-1 underline">Sign up</Link>
-            </p>
+            {user ? (
+              <p>
+                Want to update your profile?
+                <Link
+                  to={"auth/updateProfile"}
+                  className="font-semibold px-1 underline"
+                >
+                  Update Profile
+                </Link>
+              </p>
+            ) : (
+              <p>
+                Do not have an account yet?
+                <Link
+                  to={"/auth/register"}
+                  className="font-semibold px-1 underline"
+                >
+                  Sign up
+                </Link>
+              </p>
+            )}
             <div className="my-10">
-              <Link className="text-white py-2 px-24 rounded-lg bg-black">
-                Log In
-              </Link>
+              {user ? (
+                <Link
+                  onClick={userLogOut}
+                  className="text-white py-2 px-24 rounded-lg bg-black"
+                >
+                  Log Out
+                </Link>
+              ) : (
+                <Link
+                  to={"auth/login"}
+                  className="text-white py-2 px-24 rounded-lg bg-black"
+                >
+                  Log In
+                </Link>
+              )}
             </div>
           </div>
         </div>

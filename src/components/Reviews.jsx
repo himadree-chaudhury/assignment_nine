@@ -68,7 +68,11 @@ const Reviews = () => {
   ];
   return (
     <div className="py-10 ">
-      <Marquee gradient={true} speed={50} pauseOnHover={true}>
+      <Marquee
+        gradient={true}
+        gradientWidth={20}
+        pauseOnHover={true}
+      >
         {reviews.map((review) => (
           <div
             key={review.id}
