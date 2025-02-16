@@ -1,6 +1,5 @@
-import { useEffect, useRef } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import {  useRef } from "react";
+
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -64,9 +63,7 @@ const cards = [
 const Stories = () => {
   const scrollRef = useRef(null);
 
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+
 
   const scrollRight = () => {
     if (scrollRef.current) {
@@ -81,15 +78,15 @@ const Stories = () => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       <div className="relative flex items-center">
         <button
           onClick={scrollLeft}
-          className="absolute left-4 p-2 rounded-full z-10 cursor-pointer"
+          className="absolute left-0 p-2 rounded-full z-10 cursor-pointer border founded-full"
         >
-          <FaChevronLeft/>
+          <FaChevronLeft />
         </button>
-        <div className="overflow-hidden w-full px-16">
+        <div className=" w-full px-2 md:px-10 lg:px-16">
           <div
             ref={scrollRef}
             className="flex space-x-6 p-4 no-scrollbar overflow-x-hidden"
@@ -114,9 +111,9 @@ const Stories = () => {
         </div>
         <button
           onClick={scrollRight}
-          className="absolute right-4 p-2 rounded-full z-10 cursor-pointer"
+          className="absolute right-0 p-2 rounded-full z-10 cursor-pointer border founded-full"
         >
-          <FaChevronRight/>
+          <FaChevronRight />
         </button>
       </div>
     </div>

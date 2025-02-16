@@ -120,7 +120,7 @@ const Trips = () => {
         <h2 className="font-bold text-5xl text-center my-4">
           Keep things flexible
         </h2>
-        <p className="text-center max-w-1/2 mx-auto mb-6">
+        <p className="text-center md:max-w-1/2 mx-auto mb-6">
           Use Reserve Now & Pay Later to secure the activities you do not want to
           miss without being locked in.
         </p>
@@ -177,7 +177,7 @@ const Trips = () => {
         <h2 className="font-bold text-5xl text-center my-4">
           Free cancellation
         </h2>
-        <p className="text-center max-w-1/2 mx-auto mb-6">
+        <p className="text-center md:max-w-1/2 mx-auto mb-6">
           You will receive a full refund if you cancel at least 24 hours in
           advance of most experiences.
         </p>
