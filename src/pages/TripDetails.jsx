@@ -106,6 +106,7 @@ const TripDetails = () => {
                     className="border border-gray-400 rounded-lg px-6 py-2
                   "
                     type="date"
+                    name="date"
                   />
                   <input
                     className="border border-gray-400 rounded-lg px-6 py-2
