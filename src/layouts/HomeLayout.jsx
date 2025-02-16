@@ -10,6 +10,7 @@ import icon_3 from "../assets/review.png";
 import icon_4 from "../assets/plan.png";
 import { Link } from "react-router-dom";
 import Trips from "../components/trips";
+import Stories from "../components/Stories";
 
 const HomeLayout = () => {
   useEffect(() => {
@@ -98,6 +99,12 @@ const HomeLayout = () => {
             <Trips></Trips>
           </div>
         </div>
+      </section>
+      <section className="max-w-screen-2xl p-4 mx-auto">
+        <h2 className="font-bold text-3xl text-center my-12">
+          Stories That Inspire
+        </h2>
+        <Stories></Stories>
       </section>
     </div>
   );

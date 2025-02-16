@@ -5,7 +5,6 @@ const Reviews = () => {
     {
       id: 1,
       name: "James Carter",
-      gender: "male",
       image: "https://i.imgur.com/JDYyN3j.jpg",
       review:
         "Unforgettable experience! The guide was amazing, the scenery breathtaking, and everything was perfectly organized. Highly recommend this adventure tour!",
@@ -13,7 +12,6 @@ const Reviews = () => {
     {
       id: 2,
       name: "Daniel Hughes",
-      gender: "male",
       image: "https://i.imgur.com/neu0a3Q.jpg",
       review:
         "Loved every moment! Smooth booking process, great customer support, and thrilling activities. Viator never disappoints for adventure seekers!",
@@ -21,7 +19,6 @@ const Reviews = () => {
     {
       id: 3,
       name: "Emily Johnson",
-      gender: "female",
       image: "https://i.imgur.com/y0UoHie.jpg",
       review:
         "An incredible adventure! The tour was well-organized, the guides were fantastic, and the experience was simply unforgettable!",
@@ -29,7 +26,6 @@ const Reviews = () => {
     {
       id: 4,
       name: "Ethan Thompson",
-      gender: "male",
       image: "https://i.imgur.com/QG0Lmdm.jpg",
       review:
         "Adrenaline rush! The ziplining was insane, and the hiking trails were stunning. Viator made my adventure dreams come true!",
@@ -37,7 +33,6 @@ const Reviews = () => {
     {
       id: 5,
       name: "Ryan Walker",
-      gender: "male",
       image: "https://i.imgur.com/tuyVWPL.jpg",
       review:
         "Great experience! The itinerary was packed with adventure, and safety was a priority. A must-try for thrill-seekers!",
@@ -45,7 +40,6 @@ const Reviews = () => {
     {
       id: 6,
       name: "Sophia Martinez",
-      gender: "female",
       image: "https://i.imgur.com/q2fuzap.jpg",
       review:
         "Everything was perfect! From stunning locations to well-planned activities, Viator made this an adventure of a lifetime!",
@@ -53,7 +47,6 @@ const Reviews = () => {
     {
       id: 7,
       name: "Michael Anderson",
-      gender: "male",
       image: "https://i.imgur.com/wu6yLYU.jpg",
       review:
         "Incredible tour! Everything was well-planned, from transportation to activities. The guides were knowledgeable and super friendly. Will book again!",
@@ -61,7 +54,6 @@ const Reviews = () => {
     {
       id: 8,
       name: "Joshua Miller",
-      gender: "male",
       image: "https://i.imgur.com/bNzDVgw.jpg",
       review:
         "Booking was easy, and the adventure was unforgettable! Highly recommended for anyone who loves exploring off-the-beaten-path locations.",
@@ -69,7 +61,6 @@ const Reviews = () => {
     {
       id: 9,
       name: "Olivia Davis",
-      gender: "female",
       image: "https://i.imgur.com/U6ROKWW.jpg",
       review:
         "Best experience ever! The guides were so friendly, and the activities were beyond exciting. I’m already planning my next trip!",

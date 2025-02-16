@@ -46,7 +46,7 @@ const Trips = () => {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
         Mountain Treks
       </h1>
       <div
@@ -62,7 +62,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
         Wildlife Safaris
       </h1>
       <div
@@ -78,7 +78,13 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <section className="max-w-screen-2xl p-4 mx-auto">
+        <h2 className="font-bold text-3xl text-center my-12">
+          What Our Customers Say
+        </h2>
+        <Reviews></Reviews>
+      </section>
+      <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
         Forest Expeditions
       </h1>
       <div
@@ -94,13 +100,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <section className="max-w-screen-2xl p-4 mx-auto">
-        <h2 className="font-bold text-3xl text-center my-12">
-          What Our Customers Say
-        </h2>
-        <Reviews></Reviews>
-      </section>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
         Camping Retreats
       </h1>
       <div
@@ -116,7 +116,16 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <section className="p-4 bg-green-100">
+        <h2 className="font-bold text-5xl text-center my-4">
+          Keep things flexible
+        </h2>
+        <p className="text-center max-w-1/2 mx-auto mb-6">
+          Use Reserve Now & Pay Later to secure the activities you do not want to
+          miss without being locked in.
+        </p>
+      </section>
+      <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
         Desert Exploration
       </h1>
       <div
@@ -132,7 +141,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
         Kayaking in Mangroves
       </h1>
       <div
@@ -148,7 +157,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
         Glacier Trekking
       </h1>
       <div
@@ -164,7 +173,16 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <section className="p-4 bg-green-100">
+        <h2 className="font-bold text-5xl text-center my-4">
+          Free cancellation
+        </h2>
+        <p className="text-center max-w-1/2 mx-auto mb-6">
+          You will receive a full refund if you cancel at least 24 hours in
+          advance of most experiences.
+        </p>
+      </section>
+      <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
         Diving in Marine Reserves
       </h1>
       <div
@@ -180,7 +198,7 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
-      <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
+      <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
         Volcano Hiking
       </h1>
       <div
