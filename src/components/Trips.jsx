@@ -3,6 +3,7 @@ import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TripCard from "./tripCard";
+import Reviews from "./Reviews";
 
 const Trips = () => {
   const [trips, setTrips] = useState([]);
@@ -93,6 +94,12 @@ const Trips = () => {
           <TripCard key={trip.ID} trip={trip}></TripCard>
         ))}
       </div>
+      <section className="max-w-screen-2xl p-4 mx-auto">
+        <h2 className="font-bold text-3xl text-center my-12">
+          What Our Customers Say
+        </h2>
+        <Reviews></Reviews>
+      </section>
       <h1 className="font-bold text-2xl text-center my-5 animate__animated animate__headShake">
         Camping Retreats
       </h1>

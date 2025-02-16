@@ -13,9 +13,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className=" bg-black">
-      <div className="max-w-screen-2xl p-4 mx-auto mt-5">
-        <div className=" text-white">
+    <section className="mt-10">
+      <div className=" bg-black">
+        <div className="max-w-screen-2xl p-4 mx-auto  text-white">
           <div className="flex justify-center items-center gap-5 text-3xl py-5">
             <a
               href="https://www.facebook.com/himadree.chaudhury"

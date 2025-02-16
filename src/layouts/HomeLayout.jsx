@@ -11,12 +11,7 @@ import icon_4 from "../assets/plan.png";
 import { Link } from "react-router-dom";
 import Trips from "../components/trips";
 
-
-
-
 const HomeLayout = () => {
-
-
   useEffect(() => {
     AOS.init();
   }, []);

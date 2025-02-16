@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/ecoquest-logo.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiMenu2Line } from "react-icons/ri";
@@ -21,6 +21,14 @@ const Navbar = () => {
 
   const { user, userLogOut } = useContext(Context);
 
+  // *Indicate Active Route In The Navbar
+  const navLinkActiveStatus = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? "bold" : "normal",
+      borderBottom: isActive && "4px solid green",
+    };
+  };
+
   return (
     <div className="max-w-screen-2xl p-4 mx-auto font-semibold">
       <div className="flex justify-between items-center">
@@ -37,14 +45,27 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="space-x-5 hidden md:block">
-          <Link
+          <NavLink
+            style={navLinkActiveStatus}
+            className="hover:text-gray-500 transition-all duration-200"
             to={"/"}
-            className="hover:underline underline-offset-4 hover:font-bold transition-all duration-200"
           >
             Home
-          </Link>
-          <Link to={"auth/updateProfile"}>Update Profile</Link>
-          <Link to={"auth/userProfile"}>User Profile</Link>
+          </NavLink>
+          <NavLink
+            style={navLinkActiveStatus}
+            className="hover:text-gray-500 transition-all duration-200"
+            to={"auth/updateProfile"}
+          >
+            Update Profile
+          </NavLink>
+          <NavLink
+            style={navLinkActiveStatus}
+            className="hover:text-gray-500 transition-all duration-200"
+            to={"auth/userProfile"}
+          >
+            User Profile
+          </NavLink>
         </div>
         <div className="flex items-center gap-2 ">
           {user ? (
@@ -65,13 +86,13 @@ const Navbar = () => {
           {user ? (
             <Link
               onClick={userLogOut}
-              className="border border-green-400 px-3 py-1 rounded-lg hover:bg-green-800 hover:text-white hover:text-bold transition-all duration-200 hover:border-green-800"
+              className="border border-green-800 px-3 py-1 rounded-lg bg-green-800 hover:bg-white hover:text-black text-white text-bold transition-all duration-200"
             >
               Log-Out
             </Link>
           ) : (
             <Link
-              className="border border-green-400 px-3 py-1 rounded-lg hover:bg-green-800 hover:text-white hover:text-bold transition-all duration-200 hover:border-green-800"
+              className="border border-green-800 px-3 py-1 rounded-lg bg-green-800 hover:bg-white hover:text-black text-white text-bold transition-all duration-200"
               to={"auth/login"}
             >
               Log-In
@@ -85,14 +106,27 @@ const Navbar = () => {
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
         >
-          <Link
+          <NavLink
+            style={navLinkActiveStatus}
+            className="hover:text-gray-500 transition-all duration-200"
             to={"/"}
-            className="hover:underline underline-offset-4 hover:font-bold transition-all duration-200"
           >
             Home
-          </Link>
-          <Link to={"auth/updateProfile"}>Update Profile</Link>
-          <Link to={"auth/userProfile"}>User Profile</Link>
+          </NavLink>
+          <NavLink
+            style={navLinkActiveStatus}
+            className="hover:text-gray-500 transition-all duration-200"
+            to={"auth/updateProfile"}
+          >
+            Update Profile
+          </NavLink>
+          <NavLink
+            style={navLinkActiveStatus}
+            className="hover:text-gray-500 transition-all duration-200"
+            to={"auth/userProfile"}
+          >
+            User Profile
+          </NavLink>
         </div>
       )}
     </div>
