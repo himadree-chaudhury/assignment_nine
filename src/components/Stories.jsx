@@ -67,13 +67,13 @@ const Stories = () => {
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
     }
   };
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
     }
   };
 
@@ -95,7 +95,7 @@ const Stories = () => {
               <div
                 key={index}
                 className="w-80 flex-shrink-0 rounded-2xl shadow-lg p-4"
-                data-aos="fade-up"
+                
               >
                 <img
                   src={card.image}

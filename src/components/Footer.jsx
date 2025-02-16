@@ -53,7 +53,8 @@ const Footer = () => {
             <h1 className="flex items-center gap-5">
               4.4 rating | 243,593 reviews
               <span className="flex items-center">
-                <IoMdStar /> Trustpilot
+                <IoMdStar className="text-green-500" />
+                <a href="https://www.trustpilot.com/" target="_blank">Trustpilot</a>
               </span>
             </h1>
           </div>

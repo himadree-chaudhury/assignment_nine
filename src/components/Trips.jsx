@@ -47,8 +47,9 @@ const Trips = () => {
   return (
     <div className="space-y-5">
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
-        Mountain Treks
+        Mountain Treks 🌄
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"
@@ -63,8 +64,9 @@ const Trips = () => {
         ))}
       </div>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
-        Wildlife Safaris
+        🫎 Wildlife Safaris
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-left"
@@ -85,8 +87,9 @@ const Trips = () => {
         <Reviews></Reviews>
       </section>
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
-        Forest Expeditions
+        Forest Expeditions 🌴
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"
@@ -101,8 +104,9 @@ const Trips = () => {
         ))}
       </div>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
-        Camping Retreats
+        🏕️ Camping Retreats
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-left"
@@ -121,13 +125,14 @@ const Trips = () => {
           Keep things flexible
         </h2>
         <p className="text-center md:max-w-1/2 mx-auto mb-6">
-          Use Reserve Now & Pay Later to secure the activities you do not want to
-          miss without being locked in.
+          Use Reserve Now & Pay Later to secure the activities you do not want
+          to miss without being locked in.
         </p>
       </section>
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
-        Desert Exploration
+        Desert Exploration 🐫
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"
@@ -142,8 +147,9 @@ const Trips = () => {
         ))}
       </div>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
-        Kayaking in Mangroves
+        🚣 Kayaking in Mangroves
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-left"
@@ -158,8 +164,9 @@ const Trips = () => {
         ))}
       </div>
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
-        Glacier Trekking
+        Glacier Trekking ❄️
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"
@@ -183,8 +190,9 @@ const Trips = () => {
         </p>
       </section>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
-        Diving in Marine Reserves
+        🌊 Diving in Marine Reserves
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-left"
@@ -199,8 +207,9 @@ const Trips = () => {
         ))}
       </div>
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
-        Volcano Hiking
+        Volcano Hiking 🔥
       </h1>
+      <hr className="text-green-500" />
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
         data-aos="fade-right"

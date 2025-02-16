@@ -1,8 +1,6 @@
 import Header from "../components/Header";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import icon_1 from "../assets/support.png";
 import icon_2 from "../assets/reward.png";
@@ -14,9 +12,6 @@ import Stories from "../components/Stories";
 import { Context } from "../provider/ContextProvider";
 
 const HomeLayout = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const { user, userLogOut } = useContext(Context);
   console.log(user);
 
@@ -28,46 +23,37 @@ const HomeLayout = () => {
         <h1 className="font-bold text-3xl text-center my-12">
           Why Book With EcoQuest ?
         </h1>
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-baseline"
-          data-aos="zoom-out-up"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-easing="ease-in-out"
-          data-aos-offset="300"
-          data-aos-anchor-placement="top-bottom"
-        >
-          <div className="flex flex-col justify-end items-center space-y-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-baseline">
+          <div className="flex flex-col justify-end items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_1} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">
               24/7 customer support
             </h1>
             <p className="text-center">
-              No matter the time zone, we’re here to help.
+              No matter the time zone, we are here to help
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center space-y-1">
+          <div className="flex flex-col justify-center items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_2} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">Earn rewards</h1>
             <p className="text-center">
-              Explore, earn, redeem, and repeat with our loyalty program.
+              Explore, earn, redeem, and repeat with our loyalty program
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center space-y-1">
+          <div className="flex flex-col justify-center items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_3} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">
               Millions of review
             </h1>
             <p className="text-center">
-              Plan and book with confidence using reviews from fellow travelers.
+              Plan and book with confidence using reviews from fellow travelers
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center space-y-1">
+          <div className="flex flex-col justify-center items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_4} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">Plan your way</h1>
             <p className="text-center">
-              Stay flexible with free cancellation and the option to reserve now
-              and pay later at no additional cost.
+              Stay flexible with free cancellation and the option pay later
             </p>
           </div>
         </div>

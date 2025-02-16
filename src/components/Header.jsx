@@ -6,13 +6,13 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 // *Import Carousel Images
-import carousel_one from "../assets/carousel-1.jpg";
-import carousel_two from "../assets/carousel-2.jpg";
-import carousel_three from "../assets/carousel-3.jpg";
-import carousel_four from "../assets/carousel-4.jpg";
-import carousel_five from "../assets/carousel-5.jpg";
-import carousel_six from "../assets/carousel-6.jpg";
-import carousel_seven from "../assets/carousel-4.jpg";
+import carousel_one from "../assets/carousel-1.jpeg";
+import carousel_two from "../assets/carousel-2.jpeg";
+import carousel_three from "../assets/carousel-3.jpeg";
+import carousel_four from "../assets/carousel-4.jpeg";
+import carousel_five from "../assets/carousel-5.jpeg";
+import carousel_six from "../assets/carousel-6.jpeg";
+import carousel_seven from "../assets/carousel-4.jpeg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
