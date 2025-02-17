@@ -11,3 +11,14 @@ body {
   display: block; /* Removes extra spacing */
   filter: brightness(0.4);
 }
+
+@media (width <= 40rem) {
+  .mySwiper img{
+    height: 26rem;
+  }
+}
+@media (width <= 64rem) { 
+  .mySwiper img{
+    height: 25rem;
+  }
+ }

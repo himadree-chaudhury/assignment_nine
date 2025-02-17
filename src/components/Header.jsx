@@ -58,9 +58,9 @@ const Header = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="absolute top-40 z-10 text-center mx-auto w-full px-5 space-y-3 text-white animate__animated animate__fadeIn">
+        <div className="absolute top-20 lg:top-40 z-10 text-center mx-auto w-full px-5 space-y-3 text-white animate__animated animate__fadeIn">
           <h1 className="font-extrabold text-5xl">Do more with EcoQuest</h1>
-          <p className="font-bold text-2xl">
+          <p className="font-bold text-xl sm:text-2xl">
             Plan better with 300+ travel experiences
           </p>
           <div className="py-5">
