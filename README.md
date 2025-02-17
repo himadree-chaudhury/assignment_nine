@@ -2,7 +2,7 @@
 
 ## 🌍 Project Overview
 
-EcoQuest is a interactive website designed to showcase various eco-friendly travel adventures, such as mountain treks, ocean dives, and wildlife safaris. Users can explore different adventures, learn about eco-tourism, and connect with experts for consultations.
+EcoQuest is a interactive website designed to showcase various eco-friendly travel adventures, such as mountain treks, ocean dives, and wildlife safaris etc. Users can explore different adventures, learn about eco-tourism, and connect with experts for consultations.
 
 ## 🔗 Live URL
 
@@ -22,40 +22,17 @@ EcoQuest is a interactive website designed to showcase various eco-friendly trav
 
 ## 🛠️ Tech Stack & NPM Packages Used
 
-- **React.js** - Frontend framework
 - **Firebase** - Authentication & hosting
+- **React.js** - Frontend framework
 - **React Router** - Dynamic navigation
 - **Tailwind CSS** - Responsive styling
-- **Daisy UI** - Prebuilt UI components
 - **Swiper** - Image sliders
-- **AOS (Animate on Scroll)** - Smooth animations
+- **AOS** - Image slider in header
+- **Animate.css** - Smooth transition on Heading
+- **React Toastify** - Toast notifications
+- **React Fast Marquee** - Marquee animation
+- **React Icons** - Icons
+- **Prop Types** - Validate props
 
-## 🚀 Deployment
 
-- Hosted on **Netlify / Firebase / Surge** (Choose your deployment platform)
-- Ensure smooth navigation without errors on reload.
-
-## 📂 Project Setup
-
-To run this project locally:
-
-```sh
-# Clone the repository
-git clone [Your Repo URL]
-
-# Navigate to the project directory
-cd eco-adventure-experiences
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
-
-## 🔥 Contribution & Feedback
-
-Feel free to contribute or suggest improvements! Open an issue or submit a pull request.
-
-📧 Contact: [Your Email or Social Links]
 
