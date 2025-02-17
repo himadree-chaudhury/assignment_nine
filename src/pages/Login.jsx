@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
+import { Slide, toast } from "react-toastify";
 
 const Login = () => {
       const location = useLocation();
@@ -34,6 +35,17 @@ const Login = () => {
         const user = result.user;
         setUser(user);
         navigate(URI);
+        toast.success("Log-in Successful", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -52,6 +64,18 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        toast.success("Log-in Successful", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
+        navigate(URI);
       })
       .catch((error) => {
         console.log(error);

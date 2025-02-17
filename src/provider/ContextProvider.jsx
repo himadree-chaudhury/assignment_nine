@@ -12,6 +12,7 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
+import { Slide, toast } from "react-toastify";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const Context = createContext();
@@ -46,6 +47,17 @@ const ContextProvider = ({ children }) => {
 
   const userLogOut = () => {
     setLoading(true);
+    toast.error("Logged Out", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Slide,
+    });
     return signOut(auth);
   };
 

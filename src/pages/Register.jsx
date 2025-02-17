@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
+import { Slide, toast } from "react-toastify";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -56,6 +57,17 @@ const Register = () => {
         .catch((error) => {
           console.log(error);
         });
+      toast.success("Register Successful", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
     }).catch;
     {
       (error) => {
@@ -69,8 +81,22 @@ const Register = () => {
     createUserWithGoogle()
       .then((result) => {
         const user = result.user;
+        console.log(result,user,result.user)
         setUser(user);
-        navigate("/");
+        toast.success("Register Successful", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
+        {
+          user.displayName && navigate("/");
+        }
       })
       .catch((error) => {
         console.log(error);

@@ -13,7 +13,6 @@ import { Context } from "../provider/ContextProvider";
 
 const HomeLayout = () => {
   const { user, userLogOut } = useContext(Context);
-  console.log(user);
 
   return (
     <div className="">
