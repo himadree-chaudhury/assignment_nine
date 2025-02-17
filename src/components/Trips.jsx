@@ -51,7 +51,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-right"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -68,7 +68,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -91,7 +91,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-right"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -108,7 +108,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -134,7 +134,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-right"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -151,7 +151,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -168,7 +168,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-right"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -194,7 +194,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -211,7 +211,7 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
         data-aos="fade-right"
         data-aos-mirror="true"
         data-aos-once="false"
