@@ -1,10 +1,10 @@
-# EcoQuest
+# EcoQuest 🌄
 
 ## 🌍 Project Overview
 
 EcoQuest is a interactive website designed to showcase various eco-friendly travel adventures, such as mountain treks, ocean dives, and wildlife safaris etc. Users can explore different adventures, learn about eco-tourism, and connect with experts for consultations.
 
-## 🔗 Live URL
+## 🔗 Live Website
 
 [Visit EcoQuest Live](https://ecoquest-himadree.web.app/)
 
