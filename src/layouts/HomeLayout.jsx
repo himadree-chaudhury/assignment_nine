@@ -1,17 +1,24 @@
 import Header from "../components/Header";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import icon_1 from "../assets/support.png";
 import icon_2 from "../assets/reward.png";
 import icon_3 from "../assets/review.png";
 import icon_4 from "../assets/plan.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Trips from "../components/trips";
 import Stories from "../components/Stories";
 import { Context } from "../provider/ContextProvider";
 
 const HomeLayout = () => {
+  const location = useLocation();
+  useEffect(() => {
+    const titles = {
+      "/": "EcoQuest",
+    };
+    document.title = titles[location.pathname] || "EcoQuest";
+  }, [location.pathname]);
   const { user, userLogOut } = useContext(Context);
 
   return (

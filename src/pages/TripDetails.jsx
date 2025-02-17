@@ -3,6 +3,7 @@ import { CiClock2, CiMobile1 } from "react-icons/ci";
 import { BiConversation } from "react-icons/bi";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../provider/ContextProvider";
+import { Slide, toast } from "react-toastify";
 // import { useEffect, useState } from "react";
 
 const TripDetails = () => {
@@ -46,9 +47,29 @@ const TripDetails = () => {
     const number = e.target.person.value;
     if (BookingAvailability) {
       if (number > MaxGroupSize || number < 0) {
-        console.log(number);
+        toast.warn("Sorry! Not available", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
       } else {
-        console.log(number);
+        toast.success("Available !", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
       }
     }
     console.log(number);
@@ -84,7 +105,7 @@ const TripDetails = () => {
               alt={AdventureTitle}
             />
             <div className="col-span-2 ">
-              <div className="p-4 border border-gray-200 rounded-xl shadow-xl h-full flex flex-col space-y-3">
+              <div className="p-4 border border-gray-200 rounded-xl h-full flex flex-col space-y-3">
                 <div className="grow">
                   <h1 className="font-bold text-2xl">
                     From ${AdventureCost}{" "}
@@ -115,7 +136,7 @@ const TripDetails = () => {
                     name="person"
                     placeholder="2 Adults"
                   />
-                  <button className="px-6 py-2 text-white bg-green-800 font-semibold rounded-lg">
+                  <button className="px-6 py-2 text-white bg-green-800 font-semibold rounded-lg cursor-pointer">
                     Check Availability
                   </button>
                 </form>
