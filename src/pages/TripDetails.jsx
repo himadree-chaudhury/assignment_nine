@@ -71,11 +71,11 @@ const TripDetails = () => {
         <div>
           <h1 className="font-bold text-4xl">{AdventureTitle}</h1>
           <div className="flex gap-5 text-sm text-gray-500 my-2">
-            <p>{CategoryName}</p>
+            <p>🎯{CategoryName}</p>
             <p>|</p>
-            <p>{AdventureLevel}</p>
+            <p>⚓{AdventureLevel}</p>
             <p>|</p>
-            <p>{Location}</p>
+            <p>🚩{Location}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
             <img

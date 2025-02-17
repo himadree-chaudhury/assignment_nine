@@ -64,7 +64,7 @@ const Header = () => {
             Plan better with 300+ travel experiences
           </p>
           <div className="py-5">
-            <Link className="bg-green-300 px-10 py-3 rounded-2xl text-black font-semibold text-xl">
+            <Link className="bg-green-300 px-10 py-3 rounded-md text-black font-semibold text-xl">
               Search For Places
             </Link>
           </div>

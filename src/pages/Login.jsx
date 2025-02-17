@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
@@ -20,10 +20,12 @@ const Login = () => {
   } = useContext(Context);
   const navigate = useNavigate();
     const URI = location?.state ? (decodeURIComponent(location.state)) : "/" ;
-    // console.log(URI)
+  // console.log(URI)
+    const [error, setError] = useState("");
 
   const handleSignIn = (e) => {
     e.preventDefault();
+      setError("");
     const form = new FormData(e.target);
     const email = form.get("email");
     const password = form.get("password");
@@ -35,6 +37,11 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        if (error.code === "auth/invalid-credential") {
+           setError("Incorrect email or password. Try Again");
+         } else {
+           setError("Failed to log in. Please try again.");
+         }
       });
 
     // console.log(email,password)
@@ -48,6 +55,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError("Google login failed. Please try again.");
       });
   };
 
@@ -114,7 +122,10 @@ const Login = () => {
                 required
               />
             </div>
-
+            {/* Error Message */}
+            {error && (
+              <p className="text-red-500 text-sm ">{error}</p>
+            )}
             {/* Remember Me & Forgot Password */}
             <div className="flex justify-between items-center text-sm text-gray-700">
               <div className="flex items-center">
@@ -141,7 +152,7 @@ const Login = () => {
               to={"/auth/register"}
               className="text-green-500 cursor-pointer pl-1"
             >
-               Sign Up
+              Sign Up
             </Link>
           </p>
 

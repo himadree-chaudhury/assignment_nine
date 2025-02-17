@@ -69,30 +69,41 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-2 ">
           {user ? (
-            user.photoURL && (
+            user.photoURL ? (
               <div className="group relative inline-block">
                 <img
-                  className={`w-[2rem] h-[2rem] object-cover rounded-full`}
+                  className={`w-[2.5rem] h-[2.5rem] object-cover rounded-full`}
                   src={user.photoURL}
                 />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm px-2 py-1 rounded whitespace-nowrap z-10">
-                  {user.displayName}
-                </div>
+                {user.displayName && (
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-green-800 text-white font-semibold text-sm px-2 py-1 rounded whitespace-nowrap z-10">
+                    {user.displayName}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="group relative inline-block">
+                <FaRegUserCircle className="text-4xl" />
+                {user.displayName && (
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-green-800 text-white font-semibold text-sm px-2 py-1 rounded whitespace-nowrap z-10">
+                    {user.displayName}
+                  </div>
+                )}
               </div>
             )
           ) : (
-            <FaRegUserCircle className="text-3xl" />
+            <FaRegUserCircle className="text-4xl" />
           )}
           {user ? (
             <Link
               onClick={userLogOut}
-              className="border border-green-800 px-3 py-1 rounded-lg bg-green-800 hover:bg-white hover:text-black text-white text-bold transition-all duration-200"
+              className="border border-green-800 px-5 py-2 rounded-md bg-green-800 hover:bg-white hover:text-black text-white text-bold transition-all duration-200"
             >
               Log-Out
             </Link>
           ) : (
             <Link
-              className="border border-green-800 px-3 py-1 rounded-lg bg-green-800 hover:bg-white hover:text-black text-white text-bold transition-all duration-200"
+              className="border border-green-800 px-5 py-2 rounded-md bg-green-800 hover:bg-white hover:text-black text-white text-bold transition-all duration-200"
               to={"auth/login"}
             >
               Log-In

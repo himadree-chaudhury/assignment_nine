@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../provider/ContextProvider";
@@ -7,6 +7,9 @@ import { Context } from "../provider/ContextProvider";
 const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [passwordError, setPasswordError] = useState("");
+  const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+
   useEffect(() => {
     const titles = {
       "/auth/register": "Register",
@@ -17,13 +20,32 @@ const Register = () => {
   const { createNewUser, setUser, updateUser, createUserWithGoogle } =
     useContext(Context);
 
+  const validatePassword = (password) => {
+    if (password.length < 6) return "Password must be at least 6 characters.";
+    if (!/[A-Z]/.test(password))
+      return "Must contain at least one uppercase letter.";
+    if (!/[a-z]/.test(password))
+      return "Must contain at least one lowercase letter.";
+    return "";
+  };
+
   const handleRegister = (e) => {
     e.preventDefault();
+    if (!isTermsAccepted) {
+      return;
+    }
+
     const form = new FormData(e.target);
     const name = form.get("name");
     const email = form.get("email");
     const photo = form.get("image");
     const password = form.get("password");
+
+    const errorMsg = validatePassword(password);
+    if (errorMsg) {
+      return;
+    }
+
     createNewUser(email, password).then((result) => {
       const user = result.user;
       setUser(user);
@@ -150,16 +172,28 @@ const Register = () => {
               <input
                 type="password"
                 name="password"
+                onChange={(e) =>
+                  setPasswordError(validatePassword(e.target.value))
+                }
                 placeholder="Enter your Password"
                 className="ml-3 border-none outline-none w-full"
                 required
               />
             </div>
+            {passwordError && (
+              <p className="text-red-500 text-sm">{passwordError}</p>
+            )}
 
             {/* Remember Me & Forgot Password */}
             <div className="text-sm text-gray-700">
               <div className="flex items-baseline gap-2">
-                <input type="radio" name="termsAccepted" className="" />
+                <input
+                  type="checkbox"
+                  name="termsAccepted"
+                  checked={isTermsAccepted}
+                  onChange={() => setIsTermsAccepted(!isTermsAccepted)}
+                  className=""
+                />
                 <label>
                   Accept our{" "}
                   <span className="text-green-500">Terms of Use</span>, and{" "}
@@ -172,7 +206,12 @@ const Register = () => {
             {/* Register Button */}
             <button
               type="submit"
-              className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition cursor-pointer"
+              className={`mt-4 text-white font-bold rounded-lg h-12 w-full transition-all duration-200 ${
+                isTermsAccepted
+                  ? "bg-green-800 hover:bg-green-700  cursor-pointer"
+                  : "bg-gray-400 cursor-not-allowed"
+              }`}
+              disabled={!isTermsAccepted}
             >
               Register
             </button>
@@ -180,7 +219,10 @@ const Register = () => {
           {/* Sign In Link */}
           <p className="text-center text-gray-700 text-sm">
             Do have an account?{" "}
-            <Link to="/auth/login" className="text-green-500 cursor-pointer pl-1">
+            <Link
+              to="/auth/login"
+              className="text-green-500 cursor-pointer pl-1"
+            >
               Sign In
             </Link>
           </p>
