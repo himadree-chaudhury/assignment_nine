@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 
 const Reviews = () => {
+  // *Reviews Data
   const reviews = [
     {
       id: 1,
@@ -68,25 +69,27 @@ const Reviews = () => {
   ];
   return (
     <div className="py-10 ">
-      <Marquee
-        gradient={true}
-        gradientWidth={20}
-        pauseOnHover={true}
-      >
+      {/* Marquee Component */}
+      <Marquee gradient={true} gradientWidth={20} pauseOnHover={true}>
+        {/* Review Data Mapping */}
         {reviews.map((review) => (
           <div
             key={review.id}
             className="w-72 h-72 bg-white rounded-lg shadow-lg p-5 mx-4 flex flex-col items-center text-center"
           >
+            {/* Reviewer Image */}
             <img
               src={review.image}
               alt={review.name}
               className="w-20 h-20 rounded-full object-cover mb-3"
             />
+            {/* Reviewer Stars */}
             <div className="flex justify-center mt-2 text-yellow-500">
               ★ ★ ★ ★ ★
             </div>
+            {/* Reviewer Name */}
             <h3 className="text-lg font-semibold">{review.name}</h3>
+            {/* Review */}
             <p className="text-sm text-gray-600">{review.review}</p>
           </div>
         ))}

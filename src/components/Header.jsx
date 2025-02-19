@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 import "animate.css";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,7 +14,6 @@ import carousel_four from "../assets/carousel-4.jpeg";
 import carousel_five from "../assets/carousel-5.jpeg";
 import carousel_six from "../assets/carousel-6.jpeg";
 import carousel_seven from "../assets/carousel-4.jpeg";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -21,6 +21,7 @@ const Header = () => {
       <div className="relative">
         {/* Carousel Banner */}
         <div>
+          {/* Swiper JS Component */}
           <Swiper
             slidesPerView={1}
             loop={true}
@@ -35,6 +36,7 @@ const Header = () => {
             modules={[Autoplay, EffectFade, Pagination]}
             className="mySwiper"
           >
+            {/* Banner Images */}
             <SwiperSlide>
               <img src={carousel_one} alt="" />
             </SwiperSlide>
@@ -58,6 +60,7 @@ const Header = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+        {/* Banner Headings & Message */}
         <div className="absolute top-20 lg:top-40 z-10 text-center mx-auto w-full px-5 space-y-3 text-white animate__animated animate__fadeIn">
           <h1 className="font-extrabold text-5xl">Do more with EcoQuest</h1>
           <p className="font-bold text-xl sm:text-2xl">

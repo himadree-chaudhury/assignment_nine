@@ -1,25 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/ecoquest-logo.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiMenu2Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { useContext, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Context } from "../provider/ContextProvider";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import logo from "../assets/ecoquest-logo.png";
 
 const Navbar = () => {
+  // *AOS Initialization
   useEffect(() => {
     AOS.init();
   }, []);
 
+  // *Context API State & Function
+  const { user, userLogOut } = useContext(Context);
+
+  // *Hamburger Menu State & Function For Mobile View
   const [menu, setMenu] = useState(true);
   const menuStyle = () => {
     setMenu(!menu);
   };
-
-  const { user, userLogOut } = useContext(Context);
 
   // *Indicate Active Route In The Navbar
   const navLinkActiveStatus = ({ isActive }) => {
@@ -32,6 +35,7 @@ const Navbar = () => {
   return (
     <div className="max-w-screen-2xl p-4 mx-auto font-semibold">
       <div className="flex justify-between items-center">
+        {/* Mobile Menu */}
         <div className="md:hidden text-2xl">
           {menu === true ? (
             <RiMenu2Line onClick={menuStyle} />
@@ -39,11 +43,13 @@ const Navbar = () => {
             <IoMdClose onClick={menuStyle} />
           )}
         </div>
+        {/* Website Logo */}
         <div className="w-40">
           <Link to={"/"}>
             <img src={logo} alt="EcoQuest Since 2024" />
           </Link>
         </div>
+        {/* Navigation Links */}
         <div className="space-x-5 hidden md:block">
           <NavLink
             style={navLinkActiveStatus}
@@ -68,6 +74,7 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="flex items-center gap-2 ">
+          {/* User Profile Picture With Name */}
           {user ? (
             user.photoURL ? (
               <div className="group relative inline-block">
@@ -94,6 +101,7 @@ const Navbar = () => {
           ) : (
             <FaRegUserCircle className="text-4xl" />
           )}
+          {/* Login, Logout Button On User State */}
           {user ? (
             <Link
               onClick={userLogOut}
@@ -111,6 +119,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
+      {/* Mobile Navigation Links */}
       {menu === false && (
         <div
           className="space-y-2 flex flex-col md:hidden font-semibold text-xl py-5"

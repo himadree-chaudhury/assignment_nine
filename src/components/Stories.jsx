@@ -1,9 +1,9 @@
-import {  useRef } from "react";
-
+import { useRef } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const cards = [
+// *Stories Data
+const stories = [
   {
     title: "Lost in Paris: A Solo Adventure to Remember",
     image: "https://i.imgur.com/v0MQqli.jpg",
@@ -61,16 +61,13 @@ const cards = [
 ];
 
 const Stories = () => {
+  // *Scroll Functionality For Stories Navigation
   const scrollRef = useRef(null);
-
-
-
   const scrollRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
     }
   };
-
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
@@ -80,35 +77,41 @@ const Stories = () => {
   return (
     <div className="relative w-full overflow-hidden">
       <div className="relative flex items-center">
+        {/* Left Button */}
         <button
           onClick={scrollLeft}
           className="absolute left-0 p-2 rounded-full z-10 cursor-pointer border founded-full"
         >
           <FaChevronLeft />
         </button>
+        {/* Story Card */}
         <div className=" w-full px-2 md:px-10 lg:px-16">
           <div
             ref={scrollRef}
             className="flex space-x-6 p-4 no-scrollbar overflow-x-hidden"
           >
-            {cards.map((card, index) => (
+            {stories.map((card, index) => (
               <div
                 key={index}
                 className="w-80 flex-shrink-0 rounded-2xl shadow-lg p-4"
-                
               >
+                {/* Story Image */}
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-40 object-cover rounded-xl"
                 />
+                {/* Story Title */}
                 <h3 className="mt-4 text-lg font-semibold">{card.title}</h3>
+                {/* Story */}
                 <p className="text-sm">{card.description}</p>
+                {/* Read More Button */}
                 <Link className="text-green-700">Read More</Link>
               </div>
             ))}
           </div>
         </div>
+        {/* Right Button */}
         <button
           onClick={scrollRight}
           className="absolute right-0 p-2 rounded-full z-10 cursor-pointer border founded-full"

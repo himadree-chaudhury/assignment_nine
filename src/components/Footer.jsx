@@ -16,6 +16,7 @@ const Footer = () => {
     <section className="mt-10">
       <div className=" bg-black">
         <div className="max-w-screen-2xl p-4 mx-auto  text-white">
+          {/* Social Media Icons & Links */}
           <div className="flex justify-center items-center gap-5 text-3xl py-5">
             <a
               href="https://www.facebook.com/himadree.chaudhury"
@@ -42,6 +43,7 @@ const Footer = () => {
               <FaGithub />
             </a>
           </div>
+          {/* Ratings & Stars */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 py-5">
             <p className="flex items-center text-yellow-400">
               <FaStar />
@@ -54,10 +56,13 @@ const Footer = () => {
               4.4 rating | 243,593 reviews
               <span className="flex items-center">
                 <IoMdStar className="text-green-500" />
-                <a href="https://www.trustpilot.com/" target="_blank">Trustpilot</a>
+                <a href="https://www.trustpilot.com/" target="_blank">
+                  Trustpilot
+                </a>
               </span>
             </h1>
           </div>
+          {/* Logistic Links */}
           <div className="grid grid-cols-2  md:grid-cols-4 gap-5 font-bold py-5">
             <div className="grid space-y-5">
               <Link>Help Center</Link>
@@ -81,7 +86,9 @@ const Footer = () => {
           <hr className="text-gray-300" />
           <div className="py-5">
             <div className="flex flex-col lg:flex-row gap-5 items-start justify-between lg:items-center">
+              {/* Apps Links & SVG */}
               <div className="flex gap-2.5">
+                {/* Google Play */}
                 <button className="cursor-pointer">
                   <div className="flex max-w-38 h-9 px-2 gap-1.5 rounded-lg items-center justify-center bg-black text-white dark:text-black dark:bg-white sm:h-11">
                     <svg
@@ -115,6 +122,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </button>
+                {/* Apple Store */}
                 <button className="cursor-pointer">
                   <div className="flex max-w-38 h-9 px-2 gap-1.5 rounded-lg items-center justify-center bg-black text-white dark:text-black dark:bg-white sm:gap-2 sm:h-11">
                     <svg viewBox="0 0 384 512" className="w-4 sm:w-5.5">
@@ -134,7 +142,7 @@ const Footer = () => {
                   </div>
                 </button>
               </div>
-
+              {/* Links & Copyright */}
               <div className="flex flex-col md:flex-row gap-5 font-bold text-sm leading-tight">
                 <Link>Terms & Conditions</Link>
                 <Link>How EcoQuest Works</Link>

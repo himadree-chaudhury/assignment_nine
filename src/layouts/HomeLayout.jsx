@@ -1,17 +1,18 @@
-import Header from "../components/Header";
-
 import { useContext, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Context } from "../provider/ContextProvider";
+import Header from "../components/Header";
+import Trips from "../components/Trips";
+import Stories from "../components/Stories";
 
+// *Import Icons For Why Choose Us Section
 import icon_1 from "../assets/support.png";
 import icon_2 from "../assets/reward.png";
 import icon_3 from "../assets/review.png";
 import icon_4 from "../assets/plan.png";
-import { Link, useLocation } from "react-router-dom";
-import Trips from "../components/trips";
-import Stories from "../components/Stories";
-import { Context } from "../provider/ContextProvider";
 
 const HomeLayout = () => {
+  // *Dynamic Page Title
   const location = useLocation();
   useEffect(() => {
     const titles = {
@@ -19,10 +20,13 @@ const HomeLayout = () => {
     };
     document.title = titles[location.pathname] || "EcoQuest";
   }, [location.pathname]);
+
+  // *Context API State & Function
   const { user, userLogOut } = useContext(Context);
 
   return (
     <div className="">
+      {/* Header Component */}
       <Header></Header>
       {/* Why Choose Us Section */}
       <section className="max-w-screen-2xl p-4 mx-auto">
@@ -30,6 +34,7 @@ const HomeLayout = () => {
           Why Book With EcoQuest ?
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-baseline">
+          {/* Card-1 */}
           <div className="flex flex-col justify-end items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_1} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">
@@ -39,6 +44,7 @@ const HomeLayout = () => {
               No matter the time zone, we are here to help
             </p>
           </div>
+          {/* Card-2 */}
           <div className="flex flex-col justify-center items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_2} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">Earn rewards</h1>
@@ -46,6 +52,7 @@ const HomeLayout = () => {
               Explore, earn, redeem, and repeat with our loyalty program
             </p>
           </div>
+          {/* Card-3 */}
           <div className="flex flex-col justify-center items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_3} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">
@@ -55,6 +62,7 @@ const HomeLayout = () => {
               Plan and book with confidence using reviews from fellow travelers
             </p>
           </div>
+          {/* Card-4 */}
           <div className="flex flex-col justify-center items-center space-y-1 hover:-translate-y-2 hover:shadow-lg rounded-lg transition-all duration-200 py-5 px-2">
             <img className="w-20" src={icon_4} alt="Customer Support" />
             <h1 className="font-bold text-2xl text-center">Plan your way</h1>
@@ -65,15 +73,17 @@ const HomeLayout = () => {
         </div>
       </section>
 
-      {/* Account Section For Login or Signup */}
+      {/* Account Section For User Account Interaction */}
       <section className="max-w-screen-md p-4 mx-auto">
         <div className="bg-gray-200 p-1 rounded-md">
           <div className="text-center my-5 space-y-3">
+            {/* Conditional Title */}
             <h1 className="font-bold text-3xl">
               {user
                 ? `Welcome ${user.displayName}`
                 : "Log in to manage bookings & EcoQuest Rewards"}
             </h1>
+            {/* User Functionality */}
             {user ? (
               <p>
                 Want to update your profile?
@@ -95,6 +105,7 @@ const HomeLayout = () => {
                 </Link>
               </p>
             )}
+            {/* Button For User Functionality */}
             <div className="my-10">
               {user ? (
                 <Link
@@ -121,15 +132,18 @@ const HomeLayout = () => {
           Top Attractions
         </h1>
         <div>
+          {/* Trips Component */}
           <div>
             <Trips></Trips>
           </div>
         </div>
       </section>
+      {/* Stories Section */}
       <section className="max-w-screen-2xl p-4 mx-auto">
         <h2 className="font-bold text-3xl text-center my-12">
           Stories That Inspire
         </h2>
+        {/* Story Component */}
         <Stories></Stories>
       </section>
     </div>
