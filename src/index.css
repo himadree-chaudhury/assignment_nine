@@ -1,5 +1,7 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@import "tailwindcss";
+
 body {
   font-family: "Manrope", serif;
 }
@@ -13,12 +15,12 @@ body {
 }
 
 @media (width <= 40rem) {
-  .mySwiper img{
+  .mySwiper img {
     height: 26rem;
   }
 }
-@media (width <= 64rem) { 
-  .mySwiper img{
+@media (width <= 64rem) {
+  .mySwiper img {
     height: 25rem;
   }
- }
+}

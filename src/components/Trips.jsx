@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TripCard from "./tripCard";
+import TripCard from "./TripCard";
 import Reviews from "./Reviews";
 
 const Trips = () => {
+
+
   const [trips, setTrips] = useState([]);
+
   useEffect(() => {
     fetch("tripData.json")
       .then((res) => res.json())
@@ -60,7 +63,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {mountainTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="right"></TripCard>
         ))}
       </div>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
@@ -68,7 +71,8 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 text-right"
+        style={{ direction: "rtl" }}
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -77,7 +81,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {wildlifeTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="left"></TripCard>
         ))}
       </div>
       <section className="max-w-screen-2xl p-4 mx-auto">
@@ -100,7 +104,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {forestTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="right"></TripCard>
         ))}
       </div>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
@@ -108,7 +112,8 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 text-right"
+        style={{ direction: "rtl" }}
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -117,7 +122,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {campingTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="left"></TripCard>
         ))}
       </div>
       <section className="p-4 bg-green-100">
@@ -143,7 +148,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {desertTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="right"></TripCard>
         ))}
       </div>
       <h1 className="font-bold text-2xl text-right my-5 animate__animated animate__headShake">
@@ -151,7 +156,8 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 text-right"
+        style={{ direction: "rtl" }}
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -160,7 +166,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {mangrovesTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="left"></TripCard>
         ))}
       </div>
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
@@ -177,7 +183,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {glacierTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="right"></TripCard>
         ))}
       </div>
       <section className="p-4 bg-green-100">
@@ -194,7 +200,8 @@ const Trips = () => {
       </h1>
       <hr className="text-green-500" />
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 text-right"
+        style={{ direction: "rtl" }}
         data-aos="fade-left"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -203,7 +210,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {snorkelingTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="left"></TripCard>
         ))}
       </div>
       <h1 className="font-bold text-2xl text-left my-5 animate__animated animate__headShake">
@@ -220,7 +227,7 @@ const Trips = () => {
         data-aos-anchor-placement="top-bottom"
       >
         {volcanoTrips.map((trip) => (
-          <TripCard key={trip.ID} trip={trip}></TripCard>
+          <TripCard key={trip.ID} trip={trip} direction="right"></TripCard>
         ))}
       </div>
     </div>
