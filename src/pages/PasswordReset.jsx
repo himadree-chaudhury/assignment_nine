@@ -22,7 +22,6 @@ const PasswordReset = () => {
     e.preventDefault();
     const form = new FormData(e.target);
     const email = form.get("email");
-    console.log(email);
     // *Firebase Password Reset Function
     updateUserPassword(email)
       .then(() => {

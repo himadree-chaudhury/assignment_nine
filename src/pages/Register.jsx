@@ -88,7 +88,6 @@ const Register = () => {
     createUserWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(result, user, result.user);
         setUser(user);
         // *Toastify Notification
         toast.success("Register Successful", {

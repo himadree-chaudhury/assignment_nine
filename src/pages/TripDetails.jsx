@@ -12,6 +12,11 @@ const TripDetails = () => {
     document.title = locationTitle;
   }, [locationTitle]);
 
+  // *Scroll To Top On Page Load
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   // *Get URL Params & Loader Data
   const { title } = useParams();
   const trips = useLoaderData();
