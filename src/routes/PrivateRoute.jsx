@@ -5,21 +5,27 @@ import PropTypes from "prop-types";
 import Loading from "../pages/Loading";
 
 const PrivateRoute = ({ children }) => {
-  const { user,loading } = useContext(Context);
+  // * Context API State & Function
+  const { user, loading } = useContext(Context);
+
+  // *Passing The Current Location
   const location = useLocation();
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+  if (loading) {
+    // *Loading Spinner
+    return <Loading></Loading>;
+  }
   if (user) {
     return children;
   }
 
+  // *Redirect To The Log-In Page If User Is Not Logged In & Return To The Current Page After Log-In
   return <Navigate state={location.pathname} to={"/auth/login"}></Navigate>;
 };
 
 export default PrivateRoute;
 
+// *PropTypes Validation
 PrivateRoute.propTypes = {
   children: PropTypes.node.isRequired,
 };

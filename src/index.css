@@ -1,24 +1,31 @@
+/* *Google Fonts Import Link */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
+/* *Tailwind CSS Import */
 @import "tailwindcss";
 
+/* *Body Style */
 body {
   font-family: "Manrope", serif;
 }
 
+/* *Banner Image Style At The Header */
 .mySwiper img {
-  width: 100%; /* Full width of the viewport */
-  height: 38rem; /* Adjust as needed */
-  object-fit: cover; /* Ensures the full image is visible without cropping */
-  display: block; /* Removes extra spacing */
+  width: 100%;
+  height: 38rem;
+  object-fit: cover;
+  display: block;
   filter: brightness(0.4);
 }
 
+/* *Media Query For Mobile Device */
 @media (width <= 40rem) {
   .mySwiper img {
     height: 26rem;
   }
 }
+
+/* *Media Query For Tablet */
 @media (width <= 64rem) {
   .mySwiper img {
     height: 25rem;

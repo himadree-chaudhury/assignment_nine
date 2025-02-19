@@ -4,16 +4,19 @@ import { Link, useLocation } from "react-router-dom";
 import "animate.css";
 
 const UserProfile = () => {
-    const location = useLocation();
-      useEffect(() => {
-        const titles = {
-          "/auth/userProfile": "Profile",
-        };
-        document.title = titles[location.pathname] || "EcoQuest";
-      }, [location.pathname]);
-    
-  console.log(location.state);
+  // * Dynamic Page Title
+  const location = useLocation();
+  useEffect(() => {
+    const titles = {
+      "/auth/userProfile": "Profile",
+    };
+    document.title = titles[location.pathname] || "EcoQuest";
+  }, [location.pathname]);
+
+  // * Context API State & Function
   const { user } = useContext(Context);
+
+  // * Destructuring User Object
   const {
     displayName,
     email,
@@ -22,10 +25,12 @@ const UserProfile = () => {
     photoURL,
     providerId,
   } = user;
+
   return (
     <section className="max-w-screen-2xl p-4 mx-auto">
       <div>
         <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
+          {/* User Image */}
           <div>
             <img
               className="w-[15rem] lg:w-[25rem] h-[15rem] lg:h-[25rem] object-cover rounded-full"
@@ -38,6 +43,7 @@ const UserProfile = () => {
               <span className="animate__animated  animate__jackInTheBox ">
                 Hello,
               </span>
+              {/* User Name */}
               <span className="block lg:text-7xl animate__animated animate__rotateInUpRight">
                 {displayName}
               </span>
@@ -50,6 +56,7 @@ const UserProfile = () => {
         "
         />
         <div className=" text-lg mb-8">
+          {/* User Details */}
           <div className="flex gap-3">
             <div className="flex gap-3">
               <div>
@@ -65,6 +72,7 @@ const UserProfile = () => {
                 <p>:</p>
               </div>
             </div>
+            {/* User Detail Values */}
             <div className="font-semibold">
               <h1>{email}</h1>
               <h1>{emailVerified === true ? "Yes" : "No"}</h1>
@@ -73,6 +81,7 @@ const UserProfile = () => {
             </div>
           </div>
         </div>
+        {/* Update Button */}
         <div>
           <Link
             to={"/auth/updateProfile"}

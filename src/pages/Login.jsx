@@ -5,36 +5,40 @@ import { Context } from "../provider/ContextProvider";
 import { Slide, toast } from "react-toastify";
 
 const Login = () => {
-      const location = useLocation();
-      useEffect(() => {
-        const titles = {
-          "/auth/login": "Log-In",
-        };
-        document.title = titles[location.pathname] || "EcoQuest";
-      }, [location.pathname]);
+  // *Dynamic Page Title
+  const location = useLocation();
+  useEffect(() => {
+    const titles = {
+      "/auth/login": "Log-In",
+    };
+    document.title = titles[location.pathname] || "EcoQuest";
+  }, [location.pathname]);
 
-  const {
-    userLogIn,
-    createUserWithGoogle,
-    setUser,
-    setEmailField,
-  } = useContext(Context);
+  // *Context API State & Function
+  const { userLogIn, createUserWithGoogle, setUser, setEmailField } =
+    useContext(Context);
+
+  // *Navigate To The Previous Page After Successful Login Or To The Home Page
   const navigate = useNavigate();
-    const URI = location?.state ? (decodeURIComponent(location.state)) : "/" ;
-  // console.log(URI)
-    const [error, setError] = useState("");
+  const URI = location?.state ? decodeURIComponent(location.state) : "/";
 
+  // *State For Error Message
+  const [error, setError] = useState("");
+
+  // *Handle Sign-In Function
   const handleSignIn = (e) => {
     e.preventDefault();
-      setError("");
+    setError("");
     const form = new FormData(e.target);
     const email = form.get("email");
     const password = form.get("password");
+    // *Firebase Log-In Function
     userLogIn(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
         navigate(URI);
+        // *Toastify Notification
         toast.success("Log-in Successful", {
           position: "top-center",
           autoClose: 2000,
@@ -48,22 +52,23 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        console.log(error);
+        // *Wrong Email Or Password Error
         if (error.code === "auth/invalid-credential") {
-           setError("Incorrect email or password. Try Again");
-         } else {
-           setError("Failed to log in. Please try again.");
-         }
+          setError("Incorrect email or password. Try Again");
+        } else {
+          setError("Failed to log in. Please try again.");
+        }
       });
-
-    // console.log(email,password)
   };
 
+  // *Handle Google Log-In Function
   const handleGoogleLogIn = () => {
+    // *Firebase Google Log-In Function
     createUserWithGoogle()
       .then((result) => {
         const user = result.user;
         setUser(user);
+        // *Toastify Notification
         toast.success("Log-in Successful", {
           position: "top-center",
           autoClose: 2000,
@@ -83,6 +88,7 @@ const Login = () => {
       });
   };
 
+  // *Email Field OnChange Function To Update The Email Field In The Context API State
   const emailOnChange = (e) => {
     const email = e.target.value;
     setEmailField(email);
@@ -92,6 +98,7 @@ const Login = () => {
     <section className="max-w-screen-2xl p-4 mx-auto">
       <div className="flex flex-col justify-center items-center">
         <div className="bg-white p-8 w-96 rounded-xl shadow-md space-y-3">
+          {/* Form */}
           <form onSubmit={handleSignIn} className="flex flex-col gap-3 ">
             <h1 className="text-center font-bold text-3xl">Welcome Back</h1>
             <p className="text-center ">Log-in and get in touch.</p>
@@ -102,6 +109,7 @@ const Login = () => {
               </label>
             </div>
             <div className="flex items-center border border-gray-300 rounded-lg h-12 px-3 transition focus-within:border-green-500">
+              {/* Email SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -112,6 +120,7 @@ const Login = () => {
                   <path d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path>
                 </g>
               </svg>
+              {/* Email Field */}
               <input
                 type="email"
                 name="email"
@@ -121,7 +130,6 @@ const Login = () => {
                 required
               />
             </div>
-
             {/* Password Input */}
             <div className="flex flex-col">
               <label className="text-gray-700 font-semibold">
@@ -129,6 +137,7 @@ const Login = () => {
               </label>
             </div>
             <div className="flex items-center border border-gray-300 rounded-lg h-12 px-3 transition focus-within:border-green-500">
+              {/* Password SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -138,6 +147,7 @@ const Login = () => {
                 <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
                 <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
               </svg>
+              {/* Password Field */}
               <input
                 type="password"
                 name="password"
@@ -147,9 +157,7 @@ const Login = () => {
               />
             </div>
             {/* Error Message */}
-            {error && (
-              <p className="text-red-500 text-sm ">{error}</p>
-            )}
+            {error && <p className="text-red-500 text-sm ">{error}</p>}
             {/* Remember Me & Forgot Password */}
             <div className="flex justify-between items-center text-sm text-gray-700">
               <div className="flex items-center">
@@ -160,7 +168,6 @@ const Login = () => {
                 Forgot password?
               </Link>
             </div>
-
             {/* Sign In Button */}
             <button
               type="submit"
@@ -179,9 +186,7 @@ const Login = () => {
               Sign Up
             </Link>
           </p>
-
           <p className="text-center text-gray-500 text-sm">Or With</p>
-
           {/* Social Sign-In Buttons */}
           <div className="flex gap-3">
             <Link

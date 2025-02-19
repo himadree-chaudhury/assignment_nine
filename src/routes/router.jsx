@@ -62,7 +62,7 @@ const router = createBrowserRouter([
             <TripDetails></TripDetails>
           </PrivateRoute>
         ),
-        // loader: () => fetch(`tripData.json`),
+        loader: () => fetch(`/tripData.json`),
       },
     ],
   },

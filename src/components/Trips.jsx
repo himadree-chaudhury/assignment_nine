@@ -11,7 +11,7 @@ const Trips = () => {
 
   // *Fetch Trips Data
   useEffect(() => {
-    fetch("tripData.json")
+    fetch("/tripData.json")
       .then((res) => res.json())
       .then((data) => setTrips(data));
     AOS.init();
