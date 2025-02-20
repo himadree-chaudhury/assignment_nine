@@ -15,8 +15,9 @@ const PasswordReset = () => {
   // *Context API State & Function
   const { updateUserPassword, emailField } = useContext(Context);
 
-  // *Navigate To The Previous Page After Successful Password Reset Or To The Home Page
+  // *Navigate To The Previous Page After Successful Password Reset 
   const navigate = useNavigate();
+
   // *Handle Password Reset Function
   const handlePasswordReset = (e) => {
     e.preventDefault();
@@ -25,7 +26,8 @@ const PasswordReset = () => {
     // *Firebase Password Reset Function
     updateUserPassword(email)
       .then(() => {
-        navigate("/");
+        window.open("https://mail.google.com/mail");
+        navigate(-1);
       })
       .catch((error) => {
         console.log(error);
@@ -76,7 +78,7 @@ const PasswordReset = () => {
             {/* Password Reset Button */}
             <button
               type="submit"
-              className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition"
+              className="flex items-center justify-center mt-4 bg-green-800 text-white font-bold rounded-lg h-12 w-full hover:bg-green-700 transition cursor-pointer"
             >
               Reset Password
             </button>
